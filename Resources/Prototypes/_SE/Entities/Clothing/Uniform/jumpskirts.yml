@@ -1,0 +1,23 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtVanguardQuartermaster
+  name: dusty plum uniform with skirt
+  description: A noble uniform for everyday use. It's made of the best materials in the galaxy. Probably.
+  suffix: Vanguard-Quartermaster
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpskirts/qm_vanguard.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpskirts/qm_vanguard.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtVanguardQuartermasterFormal
+  name: formal dusty plum uniform with skirt
+  description: A formal uniform, which is probably worn by high-ranking officers. Has golden aiguilette and epaulettes.
+  suffix: Vanguard-Quartermaster, Formal
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpskirts/qm_vanguard_formal.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpskirts/qm_vanguard_formal.rsi
