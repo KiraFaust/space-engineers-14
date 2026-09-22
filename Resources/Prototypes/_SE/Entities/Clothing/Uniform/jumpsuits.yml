@@ -1,3 +1,4 @@
+# region Quartermaster
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitVanguardQuartermaster
@@ -21,3 +22,125 @@
     sprite: _SE/Clothing/Uniform/Jumpsuits/qm_vanguard_formal.rsi
   - type: Clothing
     sprite: _SE/Clothing/Uniform/Jumpsuits/qm_vanguard_formal.rsi
+
+# region Pajamas
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPajamasCaptain
+  name: king's blue pajamas with golden stripes and buttons
+  description: Formal pajamas for loud and mighty announcments during the sleepovers. This pair feels like you put on a cloud as a clothing.
+  suffix: Captain, Pajamas
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpsuits/pajamascaptain.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpsuits/pajamascaptain.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPajamasChiefEngineer
+  name: yellow reflective pajamas
+  description: A strange mix of engineering uniform, pajamas and reflective hazard vest. Pretty sturdy, but extremely comfy, like any pajamas should be.
+  suffix: Chief Engineer, Pajamas
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpsuits/pajamasce_nt.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpsuits/pajamasce_nt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPajamasChiefMedicalOfficer
+  name: white medical pajamas
+  description: This is a sterile, practical and comfortable pair of white pajamas with a blue cross on the belly. Such aren't for the OR, CMO!
+  suffix: Chief Medical Officer, Pajamas
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpsuits/pajamascmo.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpsuits/pajamascmo.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPajamasQuartermaster
+  name: orange pajamas
+  description:
+  suffix: Quartermaster, Pajamas
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpsuits/pajamasqm.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpsuits/pajamasqm.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPajamasResearchDirector
+  name:
+  description:
+  suffix: Research Director, Pajamas
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpsuits/pajamasrnd.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpsuits/pajamasrnd.rsi
+
+# region Other
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitAdjutant
+  name: classical white shirt with blue vest
+  description:
+  suffix: Adjutant, Formal
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpsuits/adjutant.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpsuits/adjutant.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitAdjutantAlt
+  name: grey jumpsuit with blue jacket
+  description:
+  suffix: Adjutant
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpsuits/adjutant_alt.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpsuits/adjutant_alt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitHeadOfPersonnelFormal
+  name: blue jumpsuit with red strips
+  description:
+  suffix: Head of Personnel, Formal
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpsuits/hop.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpsuits/hop.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSalvageSpecialistFormal
+  name: blue jumpsuit with suspenders
+  description: Seems to be dirty, sturdy and practical, but clearly is some sort of a stylish. Looks like something existing for formal meetings.
+  suffix: Salvage, Formal
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpsuits/hop.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpsuits/hop.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitChiefEngineerFormal
+  name: formal yellow suit with functional overalls
+  description: Very stylish, office-like jumpsuit for formal meetings. It can be cleaned easily.
+  suffix: Chief Engineer, Formal
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpsuits/ce_formal.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpsuits/ce_formal.rsi

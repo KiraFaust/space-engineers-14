@@ -1,0 +1,36 @@
+- type: entity
+  parent: [ClothingBeltBase, ClothingSlotBase, BaseCommandContraband]
+  id: ClothingBeltSheathCutlass
+  name: ceremonial cutlass' sheath
+  description: Cool ceremonial sheath for cool ceremonial blade. It is made from leather and gold.
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Belts/Sheaths/faust_dirk_sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _SE/Clothing/Belts/Sheaths/faust_dirk_sheath.rsi
+  - type: Item
+    size: Ginormous
+    shape:
+    - 0,0,1,2
+    storedOffset: 0,-2
+    storedRotation: 45
+  - type: ItemSlots
+    slots:
+      item:
+        name: Cutlass
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        ejectOnBreak: true
+        whitelist:
+          tags:
+          - CeremonialCutlass
+  - type: Appearance
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - CeremonialCutlass

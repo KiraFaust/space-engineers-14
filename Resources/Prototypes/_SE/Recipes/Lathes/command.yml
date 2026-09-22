@@ -1,0 +1,33 @@
+# Base prototypes
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseToolRecipe
+  id: BaseBureaucraticRecipe
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseToolRecipe
+  id: BaseCommandClothingRecipe
+  materials:
+    Cloth: 100
+
+# Recipes
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: Pen
+  result: Pen
+
+- type: latheRecipe
+  parent: BaseCommandClothingRecipe
+  id: CommandJumpsuit
+  result: ClothingUniformJumpsuitCommandGeneric
+
+- type: latheRecipe
+  parent: BaseCommandClothingRecipe
+  id: CommandJumpskirt
+  result: ClothingUniformJumpskirtCommandGeneric
+#  name: lathe-recipe-MedkitBurn-name

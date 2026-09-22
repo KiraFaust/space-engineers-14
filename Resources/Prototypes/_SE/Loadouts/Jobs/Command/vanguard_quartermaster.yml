@@ -1,92 +1,56 @@
-# For mantles
-- type: loadoutEffectGroup
-  id: MasterCap
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobCaptain
-      time: 20h
+# dunno why would I need it but i'll save it for later
+#- type: loadoutEffectGroup
+#  id: MasterCap
+#  effects:
+#  - !type:JobRequirementLoadoutEffect
+#    requirement:
+#      !type:RoleTimeRequirement
+#      role: JobCaptain
+#      time: 20h
 
 # Jumpsuit
 - type: loadout
-  id: CaptainJumpsuit
+  id: VQmJumpsuit
   equipment:
-    jumpsuit: ClothingUniformJumpsuitCaptain
+    jumpsuit: ClothingUniformJumpsuitVanguardQuartermaster
 
 - type: loadout
-  id: CaptainJumpskirt
+  id: VQmJumpskirt
   equipment:
-    jumpsuit: ClothingUniformJumpskirtCaptain
+    jumpsuit: ClothingUniformJumpskirtVanguardQuartermaster
 
 - type: loadout
-  id: CaptainFormalSuit
+  id: VQmFormalSuit
   equipment:
-    jumpsuit: ClothingUniformJumpsuitCapFormal
+    jumpsuit: ClothingUniformJumpsuitVanguardQuartermasterFormal
 
 - type: loadout
-  id: CaptainFormalSkirt
+  id: VQmFormalSkirt
   equipment:
-    jumpsuit: ClothingUniformJumpskirtCapFormalDress
+    jumpsuit: ClothingUniformJumpskirtVanguardQuartermasterFormal
 
 # Head
 - type: loadout
-  id: CaptainHead
+  id: VQmShako
   equipment:
-    head: ClothingHeadHatCaptain
+    head: ClothingHeadHatVanguardQM
 
-- type: loadout
-  id: CaptainCap
-  equipment:
-    head: ClothingHeadHatCapcap
+#- type: loadout
+#  id: VQmCap
+#  equipment:
+#    head: ClothingHeadHatCapcap
 
 # Neck
-- type: loadout
-  id: CaptainCloak
-  equipment:
-    neck: ClothingNeckCloakCap
-
-- type: loadout
-  id: CaptainCloakFormal
-  equipment:
-    neck: ClothingNeckCloakCapFormal
-
-- type: loadout
-  id: CaptainMantle
-  equipment:
-    neck: ClothingNeckMantleCap
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterCap
-
-- type: startingGear
-  id: CaptainMantle
-  equipment:
-    neck: ClothingNeckMantleCap
+#- type: nga
 
 # Back
-- type: loadout
-  id: CaptainBackpack
-  equipment:
-    back: ClothingBackpackCaptain
-
-- type: loadout
-  id: CaptainSatchel
-  equipment:
-    back: ClothingBackpackSatchelCaptain
-
-- type: loadout
-  id: CaptainDuffel
-  equipment:
-    back: ClothingBackpackDuffelCaptain
+# Hwell
 
 # Outer clothing
-- type: loadout
-  id: CaptainOuterClothing
-  equipment:
-    outerClothing: ClothingOuterArmorCaptainCarapace
+# :(
 
+# Shoes
 - type: loadout
-  id: CaptainWintercoat
+  id: VQmJordans
   equipment:
-    outerClothing: ClothingOuterWinterCap
+    head: ClothingShoesBootsLaceup

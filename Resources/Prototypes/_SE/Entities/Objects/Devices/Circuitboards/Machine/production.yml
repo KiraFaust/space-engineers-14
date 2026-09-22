@@ -1,0 +1,12 @@
+- type: entity
+  id: CommandTechFabCircuitboard
+  parent: BaseMachineCircuitboard
+  name: ammo techfab circuit board
+  description: A machine printed circuit board for an command techfab.
+  components:
+    - type: Sprite
+      state: command
+    - type: MachineBoard
+      prototype: CommandTechFab
+      stackRequirements:
+        Manipulator: 2

@@ -21,3 +21,64 @@
     sprite: _SE/Clothing/Uniform/Jumpskirts/qm_vanguard_formal.rsi
   - type: Clothing
     sprite: _SE/Clothing/Uniform/Jumpskirts/qm_vanguard_formal.rsi
+
+# region Other
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtAdjutant
+  name: classical white shirt with blue vest
+  description:
+  suffix: Adjutant, Formal
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpskirts/adjutant.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpskirts/adjutant.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtAdjutantAlt
+  name: grey jumpsuit with blue jacket
+  description:
+  suffix: Adjutant
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpskirts/adjutant_alt.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpskirts/adjutant_alt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtHeadOfPersonnelFormal
+  name: blue jumpskirt with red strips
+  description:
+  suffix: Head of Personnel, Formal
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpskirts/hop.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpskirts/hop.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtSalvageSpecialist
+  name: blue jumpskirt with overall skirt
+  description: It's a snappy jumpsuit with a sturdy set of overalls and skirt. It's very dirty.
+  suffix: Salvage
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpskirts/salvage.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpskirts/salvage.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtSalvageSpecialistFormal
+  name: blue jumpskirt with suspenders
+  description: Seems to be dirty, sturdy and practical, but clearly is some sort of a stylish. Looks like something existing for formal meetings.
+  suffix: Salvage, Formal
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Uniform/Jumpskirts/salvageformal.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpskirts/salvageformal.rsi

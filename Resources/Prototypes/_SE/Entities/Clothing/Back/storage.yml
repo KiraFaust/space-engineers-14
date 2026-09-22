@@ -1,0 +1,26 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackHoP
+  name: blue backpack with red stripes
+  description: Although looks expensive, costs not very much.
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Back/Backpacks/hop.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelHoP
+  name: blue satchel with red stripes
+  description: Great bureaucratic satchel for pens and papers.
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Back/Satchels/hop.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelHoP
+  name: blue duffel bag with red stripes
+  description: Full of money and papers.
+  components:
+    - type: Sprite
+      sprite: _SE/Clothing/Back/Duffels/hop.rsi

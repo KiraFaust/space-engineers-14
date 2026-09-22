@@ -1,0 +1,33 @@
+- type: entity
+  parent: BasePDA
+  id: QuartermasterVanguardPDA
+  name: vanguard quartermaster PDA
+  description: Wow! It's almost clean. But... If feels like something is there, but there is just Nothing There.
+  components:
+  - type: Pda
+    id: VQmIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-vqm
+  - type: PdaBorderColor
+    borderColor: "#445170"
+  - type: Sprite
+    sprite: _SE/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-vqm"
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      visible: false
+    - state: "insert_overlay"
+      map: [ "enum.PdaVisualLayers.CardVisible" ]
+      visible: false
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _SE/Objects/Devices/pda.rsi
+    state: pda-vqm

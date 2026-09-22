@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from baystation at https://github.com/Baystation12/Baystation12/commit/f200ae08d71ecbc91412ee650a334981892f5177 and modified by potato1234x",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "normal-unshaded",
+      "delays": [
+        [
+          2,
+          0.3,
+          0.4,
+          0.4,
+          0.4,
+          0.3,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.9,      
+          1.2
+        ]
+      ]
+    },
+    {
+      "name": "broken"
+    },
+    {
+      "name": "deny-unshaded",
+      "delays": [
+        [
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "off"
+    },
+    {
+      "name": "panel"
+    },
+    {
+      "name": "eject-unshaded",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    }
+  ]
+}

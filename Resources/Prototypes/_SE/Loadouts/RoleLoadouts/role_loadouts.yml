@@ -1,0 +1,15 @@
+# Command
+- type: roleLoadout
+  id: JobVanguardQuartermaster
+  groups:
+  - Inventory # Corvax-Loadouts
+  - QmVanguardHead
+#  - QmVanguardNeck
+  - QmVanguardJumpsuit
+  - QmVanguardShoes
+#  - QmVanguardBackpack
+#  - QmVanguardOuterClothing
+  - AssistiveItems
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool

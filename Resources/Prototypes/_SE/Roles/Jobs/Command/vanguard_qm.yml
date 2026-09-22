@@ -3,13 +3,13 @@
   name: job-name-quartermaster-vanguard
   description: job-description-quartermaster-vanguard
   playTimeTracker: JobQMVanguard
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 20h
+#  requirements:
+#    - !type:OverallPlaytimeRequirement
+#      time: 100000h
   startingGear: QMVanguardGear
   icon: "JobIconVanguard"
   joinNotifyCrew: true
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-general-command
   accessGroups:
   - AllAccess
   special:
@@ -24,13 +24,15 @@
   equipment:
     shoes: ClothingShoesBootsLaceup
     eyes: ClothingEyesGlassesCommand
-    # gloves: ClothingHandsGlovesCaptain
-    id: CaptainPDA
+    head: ClothingHeadHatVanguardQM
+    jumpsuit: ClothingUniformJumpsuitVanguardQuartermasterFormal
+    # gloves: ClothingHandsGlovesVanguardQM
+    belt: ClothingBeltSheathCutlass
+    id: QuartermasterVanguardPDA
     ears: ClothingHeadsetAltCommand
-  storage:
-    back:
-    - Flash
-    # - StationCharter
+#  storage:
+#    back:
+#    - Flash
 
 #- type: chameleonOutfit
 #  id: CaptainChameleonOutfit

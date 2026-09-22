@@ -1,0 +1,25 @@
+- type: loadoutGroup
+  id: QmVanguardHead
+  name: loadout-group-head
+#  minLimit: 2 just savin' if i'll need it later
+#  maxLimit: 2
+#  hidden: true
+  loadouts:
+  - VQmShako
+  # - :(
+
+- type: loadoutGroup
+  id: QmVanguardJumpsuit
+  name: loadout-group-jumpsuit
+  loadouts:
+  - VQmJumpsuit
+  - VQmJumpskirt
+  - VQmFormalSuit
+  - VQmFormalSkirt
+
+- type: loadoutGroup
+  id: QmVanguardShoes
+  name: loadout-group-shoes
+  loadouts:
+  - JackBoots
+  - VQmJordans

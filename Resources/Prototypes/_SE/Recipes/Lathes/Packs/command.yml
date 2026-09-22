@@ -1,0 +1,12 @@
+## Static
+
+- type: latheRecipePack
+  id: CommandClothingStatic
+  recipes:
+  - CommandJumpsuit
+  - CommandJumpskirt
+
+- type: latheRecipePack
+  id: BureaucracyStatic
+  recipes:
+  - Pen

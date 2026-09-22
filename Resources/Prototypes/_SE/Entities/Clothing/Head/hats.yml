@@ -1,0 +1,15 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatVanguardQM
+  name: dusty plum shako
+  description: It's a tall hat for a tall officer! This shako is make by the best masters. Though you can have problems with cramped spaces - this is the symbol of power!
+  components:
+  - type: Sprite
+    sprite: _SE/Clothing/Head/Hats/vg_shako.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Head/Hats/vg_shako.rsi
+    clothingVisuals:
+      head:
+        - state: equipped-HELMET
+          rsiPath: _SE/Clothing/Head/Hats/vg_shako.rsi
+          offset: 0, 0.11

@@ -19,12 +19,14 @@ public sealed class PdaVisualizerSystem : VisualizerSystem<PdaVisualsComponent>
 
         if (AppearanceSystem.TryGetData<bool>(uid, PdaVisuals.IdCardInserted, out var isCardInserted, args.Component))
             SpriteSystem.LayerSetVisible((uid, args.Sprite), PdaVisualLayers.IdLight, isCardInserted);
+            SpriteSystem.LayerSetVisible((uid, args.Sprite), PdaVisualLayers.CardVisible, isCardInserted);
     }
 
     public enum PdaVisualLayers : byte
     {
         Base,
         Flashlight,
-        IdLight
+        IdLight,
+        CardVisible
     }
 }

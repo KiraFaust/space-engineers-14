@@ -2,6 +2,6 @@
   parent: JobIcon
   id: JobIconVanguard
   icon:
-    sprite: _SE/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_SE/Interface/Misc/job_icons.rsi
     state: QuarterMasterVanguard
   jobName: job-name-quartermaster-vanguard
