@@ -1,0 +1,30 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineHoP
+  name:
+  descriptiom:
+  components:
+  - type: VendingMachine
+    pack: HopVendInventory
+    initialStockQuality: 1
+  - type: VendingMachineEject
+    ejectDelay: 1.9
+  - type: VendingMachineVisuals
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+  - type: SpeakOnUIClosed
+    pack: GeneralVendGoodbyes
+  - type: Sprite
+    sprite: _SE/Structures/Machines/VendingMachines/HoPend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 3.0
+    color: "#5267dd"

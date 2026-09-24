@@ -1,0 +1,36 @@
+- type: vendingMachineInventory
+  id: HopVendInventory
+  startingInventory:
+  # Storage
+    ClothingBackpackHoP: 3
+    ClothingBackpackSatchelHoP: 2
+    ClothingBackpackDuffelHoP: 2
+
+  # Headsets, caps and masks
+    ClothingHeadHatHopcap: 2
+    ClothingHeadHatBeretCommand: 1 # ClothingHeadHatBeretHoP: 2
+    ClothingHeadsetCommand: 1
+    ClothingEyesHudCommand: 1
+
+  # Neck
+    ClothingNeckCloakHop: 2
+    ClothingNeckMantleHOP: 1
+
+  # Uniform
+    ClothingUniformJumpsuitHoP: 2
+    ClothingUniformJumpskirtHoP: 2
+    ClothingUniformJumpsuitHoPTurtleneck: 2
+    ClothingUniformJumpskirtHoPTurtleneck: 2
+    ClothingUniformJumpsuitHeadOfPersonnelFormal: 2
+    ClothingUniformJumpskirtHeadOfPersonnelFormal: 2
+
+  # Coats and armor
+    ClothingOuterCoatHOP: 2
+    ClothingOuterWinterHoP: 1
+
+  # Legs&Hands
+    ClothingShoesLeather: 2
+    ClothingHandsGlovesHop: 2
+
+  # Misc
+    ToyFigurineHeadOfPersonnel: 1
