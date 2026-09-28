@@ -1,0 +1,34 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitHopFormal
+  name: blue uniform with vest and white shirt
+  description: Formal uniform for some bureaucratical manager. Seems to be ideally clean.
+  suffix: Head of Personnel, Formal
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniform/Jumpsuit/alt_hop.rsi
+  - type: Clothing
+    sprite: _SE/Clothing/Uniform/Jumpsuit/alt_hop.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCaptainOfficer
+  name: king blue officer uniform
+  description: Everyday uniform for some high-ranking officer. It seems to be very comfortable and cool-looking.
+  suffix: Captain, Everyday
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniform/Jumpsuit/captain.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniform/Jumpsuit/captain.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMimicryEGOSuit
+  name: "'Mimicry' flesh EGO suit"
+  description: This is a set of flesh uniform with a dangerous aura.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniform/Jumpsuit/mimicry.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniform/Jumpsuit/mimicry.rsi

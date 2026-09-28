@@ -1,0 +1,23 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtHopFormal
+  name: blue uniform with white shirt and skirt
+  description: Formal uniform for some bureaucratical manager. Seems to be ideally clean.
+  suffix: Head of Personnel, Formal
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniform/Jumpskirt/alt_hop.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniform/Jumpskirt/alt_hop.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtCaptainOfficer
+  name: king blue officer uniform with skirt
+  description: This one is very comfortable and cool looking.
+  suffix: Captain, Everyday
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniform/Jumpskirt/captain.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniform/Jumpskirt/captain.rsi

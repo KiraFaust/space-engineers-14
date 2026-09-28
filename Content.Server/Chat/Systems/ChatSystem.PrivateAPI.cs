@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Server.Discord.DiscordLink; // _SE
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.IdentityManagement;
@@ -12,6 +13,7 @@ namespace Content.Server.Chat.Systems;
 
 public sealed partial class ChatSystem
 {
+    [Dependency] private DiscordChatLink _discordChatLink = default!;
     private void SendEntitySpeak(
         EntityUid source,
         string originalMessage,
@@ -230,6 +232,7 @@ public sealed partial class ChatSystem
 
         SendInVoiceRange(ChatChannel.LOOC, message, wrappedMessage, source, hideChat ? ChatTransmitRange.HideChat : ChatTransmitRange.Normal, player.UserId);
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"LOOC from {source}: {message}");
+        _discordChatLink.SendMessage(message, player.Name, ChatChannel.LOOC); // _SE
     }
 
     private void SendDeadChat(EntityUid source, ICommonSession player, string message, bool hideChat)
@@ -258,5 +261,6 @@ public sealed partial class ChatSystem
         }
 
         _chatManager.ChatMessageToMany(ChatChannel.Dead, message, wrappedMessage, source, hideChat, true, clients.ToList(), author: player.UserId);
+        _discordChatLink.SendMessage(message, player.Name, ChatChannel.Dead); // _SE
     }
 }

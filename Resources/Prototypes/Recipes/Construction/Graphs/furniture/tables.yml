@@ -93,6 +93,27 @@
             - material: WoodPlank
               amount: 1
               doAfter: 1
+        - to: TableUraniumGlass
+          steps:
+          - material: UraniumGlass
+            amount: 1
+            doAfter: 1
+
+        - to: TableReinforcedUraniumGlass
+          steps:
+            - material: ReinforcedUraniumGlass
+              amount: 1
+              doAfter: 1
+            - tool: Welding
+              doAfter: 3
+
+        - to: TablePlasmaGlassReinforced
+          steps:
+            - material: ReinforcedPlasmaGlass
+              amount: 1
+              doAfter: 1
+            - tool: Welding
+              doAfter: 3
 
 
     - node: CounterWoodFrame
@@ -451,3 +472,43 @@
         steps:
         - tool: Anchoring
           doAfter: 1
+
+    - node: TableUraniumGlass
+      entity: TableUraniumGlass
+      edges:
+        - to: TableFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetUGlass1
+              amount: 1
+          steps:
+            - tool: Anchoring
+              doAfter: 1
+
+    - node: TableReinforcedUraniumGlass
+      entity: TableReinforcedUraniumGlass
+      edges:
+        - to: TableFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetRUGlass1
+              amount: 1
+          steps:
+            - tool: Welding
+              doAfter: 3
+            - tool: Anchoring
+              doAfter: 1
+
+    - node: TablePlasmaGlassReinforced
+      entity: TablePlasmaGlassReinforced
+      edges:
+        - to: TableFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetRPGlass1
+              amount: 1
+          steps:
+            - tool: Welding
+              doAfter: 3
+            - tool: Anchoring
+              doAfter: 1
