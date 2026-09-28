@@ -10,8 +10,6 @@
   id: BureaucracyStatic
   recipes:
   - Pen
-  - PassengerCard
-  - ClearPDA
   - ApprovedStamp
   - DeniedStamp
   - CMOStamp
@@ -24,6 +22,30 @@
   - WardenStamp
   - CEStamp
   - PlasticClipboard
+  - PenHop
+  - PenCap
+  - PenLuxury
+  - Paper
+  - AnotherPaper
+  - Envelope
+  - AnotherEnvelope
+  - OfficePaper
+  - AnotherOfficePaper
+  - HandLabeler
+
+- type: latheRecipePack
+  id: PdaStatic
+  recipes:
+  - ClearPDA
+
+- type: latheRecipePack
+  id: IdCardsStatic
+  recipes:
+  - PassengerCard
+
+- type: latheRecipePack
+  id: CircuitboardStatic
+  recipes:
   - StationRecordsCircuitboard
   - FundingAllocationCircuitboard
   - CargoRequestCircuitboard
@@ -42,13 +64,3 @@
   - StationAiFixerCircuitboard
   - StationAiUploadCircuitboard
   - CargoBountyCircuitboard
-  - PenHop
-  - PenCap
-  - PenLuxury
-  - Paper
-  - AnotherPaper
-  - Envelope
-  - AnotherEnvelope
-  - OfficePaper
-  - AnotherOfficePaper
-  - HandLabeler
