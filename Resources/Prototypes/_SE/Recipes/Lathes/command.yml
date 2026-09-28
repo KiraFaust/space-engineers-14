@@ -14,12 +14,6 @@
   materials:
     Cloth: 500
 
-- type: latheRecipe
-  abstract: true
-  parent: BaseToolRecipe
-  id: BaseCommandMachineRecipe
-  materials:
-    Steel: 500
 # Recipes
 
 - type: latheRecipe
@@ -41,7 +35,7 @@
   result: ClothingUniformJumpskirtCommandGeneric
 #  name: lathe-recipe-MedkitBurn-name
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: PassengerCard
   result: PassengerIDCard
   materials:
@@ -50,7 +44,7 @@
     Silver: 100
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: ClearPDA
   result: ClearPDA
   materials:
@@ -154,7 +148,7 @@
     Plastic: 500
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: CommsCircuitboard
   result: CommsComputerCircuitboard
   materials:
@@ -163,7 +157,7 @@
     Silver: 200
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: StationRecordsCircuitboard
   result: StationRecordsComputerCircuitboard
   materials:
@@ -172,7 +166,7 @@
     Silver: 200
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: FundingAllocationCircuitboard
   result: FundingAllocationComputerCircuitboard
   materials:
@@ -182,7 +176,7 @@
     Plasma: 200
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: CargoRequestCircuitboard
   result: CargoRequestComputerCircuitboard
   materials:
@@ -192,7 +186,7 @@
     Plasma: 200
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: SalvageJobBoardCircuitboard
   result: SalvageJobBoardComputerCircuitboard
   materials:
@@ -202,7 +196,7 @@
     Plasma: 200
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: CargoRequestEngineeringCircuitboard
   result: CargoRequestEngineeringComputerCircuitboard
   materials:
@@ -213,7 +207,7 @@
     Diamond: 100
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: CargoRequestMedicalCircuitboard
   result: CargoRequestMedicalComputerCircuitboard
   materials:
@@ -224,7 +218,7 @@
     Diamond: 100
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: CargoRequestScienceCircuitboard
   result: CargoRequestScienceComputerCircuitboard
   materials:
@@ -235,7 +229,7 @@
     Diamond: 100
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: CargoRequestSecurityCircuitboard
   result: CargoRequestSecurityComputerCircuitboard
   materials:
@@ -246,7 +240,7 @@
     Diamond: 100
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: CargoRequestServiceCircuitboard
   result: CargoRequestServiceComputerCircuitboard
   materials:
@@ -257,7 +251,7 @@
     Diamond: 100
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: IDCircuitboard
   result: IDComputerCircuitboard
   materials:
@@ -266,7 +260,7 @@
     Silver: 200
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: CriminalRecordsCircuitboard
   result: CriminalRecordsComputerCircuitboard
   materials:
@@ -275,7 +269,7 @@
     Silver: 200
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: CrewMonitoringCircuitboard
   result: CrewMonitoringComputerCircuitboard
   materials:
@@ -284,7 +278,7 @@
     Silver: 200
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: CargoSaleCircuitboard
   result: CargoSaleComputerCircuitboard
   materials:
@@ -293,7 +287,7 @@
     Silver: 200
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: CargoShuttleCircuitboard
   result: CargoShuttleConsoleCircuitboard
   materials:
@@ -302,7 +296,7 @@
     Silver: 100
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: ShuttleCircuitboard
   result: ShuttleConsoleCircuitboard
   materials:
@@ -311,7 +305,7 @@
     Silver: 100
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: StationAiFixerCircuitboard
   result: StationAiFixerCircuitboard
   materials:
@@ -322,7 +316,7 @@
     Diamond: 100
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: StationAiUploadCircuitboard
   result: StationAiUploadCircuitboard
   materials:
@@ -333,7 +327,7 @@
     Diamond: 100
 
 - type: latheRecipe
-  parent: BaseCommandMachineRecipe
+  parent: BaseBureaucraticRecipe
   id: CargoBountyCircuitboard
   result: CargoBountyComputerCircuitboard
   materials:
