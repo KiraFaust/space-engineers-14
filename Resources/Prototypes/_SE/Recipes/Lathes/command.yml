@@ -12,14 +12,23 @@
   parent: BaseToolRecipe
   id: BaseCommandClothingRecipe
   materials:
-    Cloth: 100
+    Cloth: 500
 
+- type: latheRecipe
+  abstract: true
+  parent: BaseToolRecipe
+  id: BaseCommandMachineRecipe
+  materials:
+    Steel: 500
 # Recipes
 
 - type: latheRecipe
   parent: BaseBureaucraticRecipe
   id: Pen
   result: Pen
+  materials:
+    Plastic: 100
+    Steel: 100
 
 - type: latheRecipe
   parent: BaseCommandClothingRecipe
@@ -31,3 +40,377 @@
   id: CommandJumpskirt
   result: ClothingUniformJumpskirtCommandGeneric
 #  name: lathe-recipe-MedkitBurn-name
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: PassengerCard
+  result: PassengerIDCard
+  materials:
+    Plastic: 1000
+    Gold: 100
+    Silver: 100
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: ClearPDA
+  result: ClearPDA
+  materials:
+    Plastic: 500
+    Glass: 200
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: ApprovedStamp
+  result: RubberStampApproved
+  materials:
+    Plastic: 300
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: DeniedStamp
+  result: RubberStampDenied
+  materials:
+    Plastic: 300
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: CMOStamp
+  result: RubberStampCMO
+  materials:
+    Plastic: 300
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: IAAStamp
+  result: RubberStampIAA
+  materials:
+    Plastic: 300
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: HopStamp
+  result: RubberStampHop
+  materials:
+    Plastic: 300
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: HosStamp
+  result: RubberStampHos
+  materials:
+    Plastic: 300
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: CaptainStamp
+  result: RubberStampCaptain
+  materials:
+    Plastic: 300
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: QmStamp
+  result: RubberStampQm
+  materials:
+    Plastic: 300
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: RdStamp
+  result: RubberStampRd
+  materials:
+    Plastic: 300
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: WardenStamp
+  result: RubberStampWarden
+  materials:
+    Plastic: 300
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: CEStamp
+  result: RubberStampCE
+  materials:
+    Plastic: 300
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: PlasticClipboard
+  result: BoxFolderPlasticClipboardEmpty
+  materials:
+    Plastic: 500
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: CommsCircuitboard
+  result: CommsComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: StationRecordsCircuitboard
+  result: StationRecordsComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: FundingAllocationCircuitboard
+  result: FundingAllocationComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+    Plasma: 200
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: CargoRequestCircuitboard
+  result: CargoRequestComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+    Plasma: 200
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: SalvageJobBoardCircuitboard
+  result: SalvageJobBoardComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+    Plasma: 200
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: CargoRequestEngineeringCircuitboard
+  result: CargoRequestEngineeringComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+    Plasma: 200
+    Diamond: 100
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: CargoRequestMedicalCircuitboard
+  result: CargoRequestMedicalComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+    Plasma: 200
+    Diamond: 100
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: CargoRequestScienceCircuitboard
+  result: CargoRequestScienceComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+    Plasma: 200
+    Diamond: 100
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: CargoRequestSecurityCircuitboard
+  result: CargoRequestSecurityComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+    Plasma: 200
+    Diamond: 100
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: CargoRequestServiceCircuitboard
+  result: CargoRequestServiceComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+    Plasma: 200
+    Diamond: 100
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: IDCircuitboard
+  result: IDComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: CriminalRecordsCircuitboard
+  result: CriminalRecordsComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: CrewMonitoringCircuitboard
+  result: CrewMonitoringComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: CargoSaleCircuitboard
+  result: CargoSaleComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: CargoShuttleCircuitboard
+  result: CargoShuttleConsoleCircuitboard
+  materials:
+    Steel: 500
+    Gold: 200
+    Silver: 100
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: ShuttleCircuitboard
+  result: ShuttleConsoleCircuitboard
+  materials:
+    Steel: 500
+    Gold: 200
+    Silver: 100
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: StationAiFixerCircuitboard
+  result: StationAiFixerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+    Plasma: 200
+    Diamond: 100
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: StationAiUploadCircuitboard
+  result: StationAiUploadCircuitboard
+  materials:
+    Steel: 500
+    Gold: 300
+    Silver: 200
+    Plasma: 200
+    Diamond: 100
+
+- type: latheRecipe
+  parent: BaseCommandMachineRecipe
+  id: CargoBountyCircuitboard
+  result: CargoBountyComputerCircuitboard
+  materials:
+    Steel: 500
+    Gold: 200
+    Silver: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: PenHop
+  result: PenHop
+  materials:
+    Plastic: 100
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: PenCap
+  result: PenCap
+  materials:
+    Plastic: 100
+    Steel: 100
+    Gold: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: PenLuxury
+  result: LuxuryPen
+  materials:
+    Plastic: 100
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: Paper
+  result: Paper
+  materials:
+    Paper: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: AnotherPaper
+  result: Paper
+  materials:
+    Wood: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: Envelope
+  result: Envelope
+  materials:
+    Paper: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: AnotherEnvelope
+  result: Envelope
+  materials:
+    Wood: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: OfficePaper
+  result: PaperOffice
+  materials:
+    Paper: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: AnotherOfficePaper
+  result: PaperOffice
+  materials:
+    Wood: 100
+
+- type: latheRecipe
+  parent: BaseBureaucraticRecipe
+  id: HandLabeler
+  result: HandLabeler
+  materials:
+    Plastic: 500

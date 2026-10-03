@@ -25,9 +25,10 @@
     unlitRunningState: unlit-building
     staticPacks:
     - CommandClothingStatic
-     # - IdCardsStatic
-     # - PdaStatic
+    - IdCardsStatic
+    - PdaStatic
     - BureaucracyStatic
+    - CircuitboardStatic
     # dynamicPacks:
     # - PortableTechnologyDinamic
   - type: Machine
