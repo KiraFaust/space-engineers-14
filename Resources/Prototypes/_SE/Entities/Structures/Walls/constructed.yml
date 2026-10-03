@@ -34,7 +34,8 @@
           sound:
             collection: MetalSlam
   - type: Damageable
+    damageModifierSet: StructuralMetallic
+  - type: Injurable
     damageContainer: StructuralInorganicUltraHeavy
-    damageModifierSet: StructuralMetallicStrongUltra
   - type: StaticPrice
     price: 250

@@ -1,8 +1,8 @@
 - type: entity
   parent: VendingMachine
   id: VendingMachineHoP
-  name:
-  descriptiom:
+  name: Paper-o-Mat
+  description: A vending machine, that was clearly painted with ink. Whatever you need - shoes or your cape - this Paper-o-Mat will help you.
   components:
   - type: VendingMachine
     pack: HopVendInventory
@@ -12,8 +12,6 @@
   - type: VendingMachineVisuals
     ejectState: eject-unshaded
     denyState: deny-unshaded
-  - type: SpeakOnUIClosed
-    pack: GeneralVendGoodbyes
   - type: Sprite
     sprite: _SE/Structures/Machines/VendingMachines/HoPend.rsi
     layers:

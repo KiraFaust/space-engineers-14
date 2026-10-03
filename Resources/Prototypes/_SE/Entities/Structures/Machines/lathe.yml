@@ -32,8 +32,6 @@
     # - PortableTechnologyDinamic
   - type: Machine
     board: CommandTechFabCircuitboard
-  - type: StealTarget
-    stealGroup: CommandTechFabCircuitboard
   - type: OreSiloClient
   - type: LatheAnnouncing
     channels: [Command]

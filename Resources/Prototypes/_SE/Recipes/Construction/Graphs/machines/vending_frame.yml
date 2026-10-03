@@ -50,7 +50,7 @@
               store: vending_dispenser
               name: construction-graph-tag-vending-dispenser
               icon:
-                sprite: Objects/Devices/vending_dispenser.rsi
+                sprite: _SE/Objects/Devices/vending_dispenser.rsi
                 state: icon
               doAfter: 2
 
