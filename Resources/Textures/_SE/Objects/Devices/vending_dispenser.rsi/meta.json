@@ -1,0 +1,28 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made for Space Station 14. inhand-left and inhand-right are placeholders positioned after vending_machine_restock.rsi from tgstation (commit 014c44ef6279beb02a5f3e76824439fa57181c22).",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "frame"
+        },
+        {
+            "name": "wires"
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        }
+    ]
+}

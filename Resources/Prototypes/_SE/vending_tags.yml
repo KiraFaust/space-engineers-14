@@ -1,0 +1,8 @@
+- type: Tag
+  id: VendingDispenser
+
+- type: Tag
+  id: VendingDispenserBoard
+
+- type: Tag
+  id: VendingMachineBoard

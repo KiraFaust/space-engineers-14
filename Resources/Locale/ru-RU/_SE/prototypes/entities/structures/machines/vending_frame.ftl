@@ -1,0 +1,31 @@
+ent-BaseVendingMachineFrame = каркас торгового автомата
+    .desc = Торговый автомат в процессе сборки.
+ent-VendingMachineFrame = { ent-BaseVendingMachineFrame }
+    .desc = { ent-BaseVendingMachineFrame.desc }
+    .suffix = Пустой
+ent-VendingMachineFrameWired = { ent-BaseVendingMachineFrame }
+    .desc = { ent-BaseVendingMachineFrame.desc }
+    .suffix = Провода
+ent-VendingMachineFrameDispenser = { ent-BaseVendingMachineFrame }
+    .desc = { ent-BaseVendingMachineFrame.desc }
+    .suffix = Диспенсер
+ent-VendingMachineFrameBoard = { ent-BaseVendingMachineFrame }
+    .desc = { ent-BaseVendingMachineFrame.desc }
+    .suffix = Плата
+ent-VendingMachineFrameDestroyed = разрушенный каркас торгового автомата
+    .desc = Всё, что осталось от каркаса торгового автомата. Можно разрезать сваркой.
+
+ent-BaseVendingDispenserFrame = каркас диспенсера
+    .desc = Диспенсер торгового автомата в процессе сборки.
+ent-VendingDispenserFrame = { ent-BaseVendingDispenserFrame }
+    .desc = { ent-BaseVendingDispenserFrame.desc }
+ent-VendingDispenserFrameWired = { ent-BaseVendingDispenserFrame }
+    .desc = { ent-BaseVendingDispenserFrame.desc }
+    .suffix = Провода
+ent-VendingDispenser = диспенсер торгового автомата
+    .desc = Тяжёлый механизм выдачи товаров. Вставляется в каркас торгового автомата.
+
+ent-VendingDispenserCircuitboard = плата диспенсера
+    .desc = Печатная плата для диспенсера торгового автомата.
+ent-BaseVendingMachineCircuitboard = плата торгового автомата
+    .desc = Печатная плата торгового автомата. Вставляется в каркас торгового автомата.

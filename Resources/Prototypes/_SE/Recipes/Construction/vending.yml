@@ -1,0 +1,19 @@
+- type: construction
+  id: VendingMachineFrame
+  graph: VendingMachineFrame
+  startNode: start
+  targetNode: vendingMachine
+  category: construction-category-machines
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  id: VendingDispenser
+  graph: VendingDispenser
+  startNode: start
+  targetNode: dispenser
+  category: construction-category-machines
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
