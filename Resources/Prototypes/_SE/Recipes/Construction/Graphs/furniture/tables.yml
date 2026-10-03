@@ -42,8 +42,8 @@
         - to: CoffeeTableReinforced
           steps:
             - material: Plasteel
-              amount: 1
-              doAfter: 1
+              amount: 3
+              doAfter: 3
 
         - to: CoffeeTableGlass
           steps:
