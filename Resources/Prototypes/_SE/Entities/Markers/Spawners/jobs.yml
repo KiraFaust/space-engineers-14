@@ -1,0 +1,12 @@
+
+- type: entity
+  id: SpawnPointVanguardQuartermaster
+  parent: SpawnPointJobBase
+  name: vanguard quartermaster
+  components:
+  - type: SpawnPoint
+    job_id: VanguardQuartermaster
+  - type: Sprite
+    layers:
+      - state: green
+      - state: qm
