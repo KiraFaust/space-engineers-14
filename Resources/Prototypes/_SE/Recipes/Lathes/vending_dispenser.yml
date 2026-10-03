@@ -1,0 +1,9 @@
+- type: latheRecipe
+  parent: [BaseCircuitboardRecipe, BaseServiceMachineRecipeCategory]
+  id: VendingDispenserCircuitboard
+  result: VendingDispenserCircuitboard
+
+- type: latheRecipePack
+  id: VendingDispenserBoards
+  recipes:
+  - VendingDispenserCircuitboard

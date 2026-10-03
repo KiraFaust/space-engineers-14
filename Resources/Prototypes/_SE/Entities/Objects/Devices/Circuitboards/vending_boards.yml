@@ -1,0 +1,37 @@
+- type: entity
+  parent: BaseElectronics
+  id: VendingDispenserCircuitboard
+  name: vending dispenser board
+  description: A circuit board for a vending machine dispenser.
+  components:
+  - type: Sprite
+    state: generic
+  - type: Tag
+    tags:
+    - VendingDispenserBoard
+
+- type: entity
+  abstract: true
+  parent: BaseMachineCircuitboard
+  id: BaseVendingMachineCircuitboard
+  name: vending machine board
+  description: A circuit board for a vending machine. Goes into a vending machine frame.
+  components:
+  - type: Sprite
+    state: service
+  - type: Tag
+    tags:
+    - VendingMachineBoard
+
+- type: entity
+  parent: BaseVendingMachineCircuitboard
+  id: HeadOfPersonnelVendingMachineCircuitboard
+  name: vending machine board (Paper-o-Mat)
+  description: A circuit board for a vending machine. Goes into a vending machine frame.
+  components:
+  - type: Sprite
+    state: command
+  - type: MachineBoard
+    prototype: VendingMachineHoP
+    stackRequirements:
+      Manipulator: 2

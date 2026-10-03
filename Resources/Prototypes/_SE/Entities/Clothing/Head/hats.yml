@@ -11,5 +11,4 @@
     clothingVisuals:
       head:
         - state: equipped-HELMET
-          rsiPath: _SE/Clothing/Head/Hats/vg_shako.rsi
           offset: 0, 0.11
