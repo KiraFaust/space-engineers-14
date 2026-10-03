@@ -24031,7 +24031,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 73.5,41.5
-- proto: WeaponRifleM90GrenadeLauncher
+- proto: ClothingHeadHatSombrero
   entities:
   - uid: 2174
     components:

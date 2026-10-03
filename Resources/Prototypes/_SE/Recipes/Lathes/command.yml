@@ -12,7 +12,7 @@
   parent: BaseToolRecipe
   id: BaseCommandClothingRecipe
   materials:
-    Cloth: 100
+    Cloth: 300
 
 # Recipes
 
