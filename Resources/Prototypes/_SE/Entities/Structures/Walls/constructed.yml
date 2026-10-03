@@ -36,6 +36,6 @@
   - type: Damageable
     damageModifierSet: StructuralMetallic
   - type: Injurable
-    damageContainer: StructuralInorganicUltraHeavy
+    damageContainer: StructuralInorganic
   - type: StaticPrice
     price: 250
