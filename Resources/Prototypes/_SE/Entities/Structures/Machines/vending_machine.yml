@@ -26,3 +26,5 @@
     radius: 1.5
     energy: 3.0
     color: "#5267dd"
+  - type: Machine
+    board: HeadOfPersonnelVendingMachineCircuitboard

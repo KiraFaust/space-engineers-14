@@ -51,15 +51,15 @@
     graph: CoffeeTableGraph
     node: CoffeeTableFrame
 
-# Steel
 - type: entity
   parent: BaseStructure
-  id: CoffeeTableSteel
+  id: CoffeeTableBase
   name: coffee table
   description: Simple coffee table.
   components:
   - type: Anchorable
   - type: InteractionOutline
+  - type: Climbable
   - type: PlaceableSurface
   - type: Sprite
     sprite: _SE/Structures/Furniture/Tables/coffee_table.rsi
@@ -80,6 +80,14 @@
     damageModifierSet: Metallic
   - type: Injurable
     damageContainer: Inorganic
+
+# Steel
+- type: entity
+  parent: BaseStructure
+  id: CoffeeTableSteel
+  name: coffee table
+  description: Simple coffee table.
+  components:
   - type: Destructible
     thresholds:
     - trigger:
@@ -102,14 +110,14 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: Climbable
   - type: Construction
     graph: CoffeeTableGraph
     node: CoffeeTableSteel
 
+
 # Wood
 - type: entity
-  parent: CoffeeTableSteel
+  parent: CoffeeTableBase
   id: CoffeeTableWood
   name: wooden coffee table
   description: Even more simple coffee table.
@@ -151,7 +159,7 @@
 
 # Reinforced steel
 - type: entity
-  parent: CoffeeTableSteel
+  parent: CoffeeTableBase
   id: CoffeeTableReinforced
   name: reinforced coffee table
   description: You obviously know, what are you doing, right?
@@ -193,7 +201,7 @@
 
 # Glass
 - type: entity
-  parent: CoffeeTableSteel
+  parent: CoffeeTableBase
   id: CoffeeTableGlass
   name: glass coffee table
   description: Please, don't try standing on it.
@@ -240,7 +248,7 @@
 
 # Reinforced glass
 - type: entity
-  parent: CoffeeTableSteel
+  parent: CoffeeTableBase
   id: CoffeeTableReinforcedGlass
   name: reinforced glass coffee table
   description: Robust and reflective.
@@ -290,7 +298,7 @@
 
 # Plasma glass
 - type: entity
-  parent: CoffeeTableSteel
+  parent: CoffeeTableBase
   id: CoffeeTablePlasma
   name: plasma glass coffee table
   description: Suspiciously plasma table...
@@ -340,7 +348,7 @@
 
 # Reinforced plasma glass
 - type: entity
-  parent: CoffeeTableSteel
+  parent: CoffeeTableBase
   id: CoffeeTableReinforcedPlasma
   name: reinforced plasma glass coffee table
   description: A table for strangers... Hello, assistant with lightsaber.
@@ -390,7 +398,7 @@
 
 # Uranium glass
 - type: entity
-  parent: CoffeeTableSteel
+  parent: CoffeeTableBase
   id: CoffeeTableUranium
   name: uranium glass coffe table
   description: Is it OSHA approved?
@@ -440,7 +448,7 @@
 
 # Reinforced uranium glass
 - type: entity
-  parent: CoffeeTableSteel
+  parent: CoffeeTableBase
   id: CoffeeTableReinforcedUranium
   name: reinforced uranium glass coffee table
   description: This is buisness you strived for, my friend.
