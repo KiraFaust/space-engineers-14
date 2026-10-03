@@ -18,8 +18,6 @@
       map: ["display"]
       visible: false
     - state: control_fan
-      map: ["display"]
-      visible: false
   - type: Physics
   - type: Fixtures
     fixtures:
