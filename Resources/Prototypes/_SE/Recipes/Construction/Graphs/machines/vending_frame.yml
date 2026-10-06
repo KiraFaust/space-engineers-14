@@ -1,0 +1,138 @@
+- type: constructionGraph
+  id: VendingMachineFrame
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:SpawnPrototype
+          prototype: SheetSteel1
+        - !type:DeleteEntity
+      edges:
+        - to: mainFrame
+          completed:
+            - !type:SetAnchor
+              value: false
+          steps:
+            - material: Steel
+              amount: 5
+              doAfter: 2.5
+
+    - node: mainFrame
+      entity: VendingMachineFrame
+      edges:
+        - to: mainFrameWires
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - material: Cable
+              amount: 2
+              doAfter: 1
+
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+            - !type:DeleteEntity
+          steps:
+            - tool: Screwing
+              doAfter: 2
+
+    - node: mainFrameWires
+      entity: VendingMachineFrameWired
+      edges:
+        - to: mainFrameDispenser
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - tag: VendingDispenser
+              store: vending_dispenser
+              name: construction-graph-tag-vending-dispenser
+              icon:
+                sprite: _SE/Objects/Devices/vending_dispenser.rsi
+                state: icon
+              doAfter: 2
+
+        - to: mainFrame
+          conditions:
+            - !type:EntityAnchored
+          completed:
+            - !type:SpawnPrototype
+              prototype: CableApcStack1
+              amount: 2
+          steps:
+            - tool: Cutting
+              doAfter: 1
+
+    - node: mainFrameDispenser
+      entity: VendingMachineFrameDispenser
+      edges:
+        - to: mainFrameBoard
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - tag: VendingMachineBoard
+              store: machine_board
+              name: construction-graph-tag-vending-machine-board
+              icon:
+                sprite: Objects/Misc/module.rsi
+                state: service
+
+        - to: mainFrameWires
+          conditions:
+            - !type:EntityAnchored
+          completed:
+            - !type:EmptyContainer
+              container: vending_dispenser
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: mainFrameBoard
+      entity: VendingMachineFrameBoard
+      edges:
+        - to: vendingMachine
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - tool: Screwing
+              doAfter: 1
+
+        - to: mainFrameDispenser
+          conditions:
+            - !type:EntityAnchored
+          completed:
+            - !type:EmptyContainer
+              container: machine_board
+            - !type:EmptyContainer
+              container: machine_parts
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: vendingMachine
+      entity: !type:BoardNodeEntity { container: machine_board }
+      edges:
+        - to: mainFrameBoard
+          conditions:
+            - !type:EntityAnchored
+            - !type:WirePanel
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: destroyed
+      entity: VendingMachineFrameDestroyed
+      actions:
+        - !type:EmptyAllContainers
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 3
+            - !type:DeleteEntity
+          steps:
+            - tool: Welding
+              doAfter: 5

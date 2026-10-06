@@ -1,0 +1,69 @@
+- type: constructionGraph
+  id: VendingDispenser
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: dispenserFrame
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 2
+
+    - node: dispenserFrame
+      entity: VendingDispenserFrame
+      edges:
+        - to: dispenserWires
+          steps:
+            - tag: VendingDispenserBoard
+              store: board
+              name: construction-graph-tag-vending-dispenser-board
+              icon:
+                sprite: Objects/Misc/module.rsi
+                state: generic
+            - material: Cable
+              amount: 2
+              doAfter: 1
+
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 2
+            - !type:DeleteEntity
+          steps:
+            - tool: Screwing
+              doAfter: 2
+
+    - node: dispenserWires
+      entity: VendingDispenserFrameWired
+      edges:
+        - to: dispenser
+          steps:
+            - material: Plastic
+              amount: 5
+              doAfter: 2
+
+        - to: dispenserFrame
+          completed:
+            - !type:EmptyContainer
+              container: board
+            - !type:SpawnPrototype
+              prototype: CableApcStack1
+              amount: 2
+          steps:
+            - tool: Cutting
+              doAfter: 1
+
+    - node: dispenser
+      entity: VendingDispenser
+      edges:
+        - to: dispenserWires
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlastic1
+              amount: 5
+          steps:
+            - tool: Prying
+              doAfter: 2

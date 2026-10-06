@@ -1,6 +1,6 @@
 - type: loadoutGroup
   id: QmVanguardHead
-  name: loadout-group-head
+  name: loadout-group-head-vqm
 #  minLimit: 2 just savin' if i'll need it later
 #  maxLimit: 2
 #  hidden: true
@@ -10,7 +10,7 @@
 
 - type: loadoutGroup
   id: QmVanguardJumpsuit
-  name: loadout-group-jumpsuit
+  name: loadout-group-jumpsuit-vqm
   loadouts:
   - VQmJumpsuit
   - VQmJumpskirt
@@ -19,7 +19,7 @@
 
 - type: loadoutGroup
   id: QmVanguardShoes
-  name: loadout-group-shoes
+  name: loadout-group-shoes-vqm
   loadouts:
   - JackBoots
   - VQmJordans
