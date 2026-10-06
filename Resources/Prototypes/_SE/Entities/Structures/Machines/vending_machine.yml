@@ -26,5 +26,9 @@
     radius: 1.5
     energy: 3.0
     color: "#5267dd"
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
   - type: Machine
     board: HeadOfPersonnelVendingMachineCircuitboard
