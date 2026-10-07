@@ -1,0 +1,31 @@
+- type: entity
+  parent: BaseWall
+  id: WallDev
+  name: wall dev
+  components:
+  - type: Tag
+    tags:
+    - Wall
+  - type: Sprite
+    sprite: _SE/Structures/Walls/dev.rsi
+  - type: Icon
+    sprite: _SE/Structures/Walls/dev.rsi
+  - type: IconSmooth
+    key: walls
+    base: dev
+  - type: Fixtures
+    fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          mask:
+          - FullTileMask
+          layer:
+          - WallLayer
+          density: 4000
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: RadiationBlocker
+    resistance: 5

@@ -1,0 +1,15 @@
+- type: tile
+  id: FloorDev
+  name: tiles-floor-dev
+  sprite: _SE/Tiles/dev.png
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  footstepSounds:
+    collection: FootstepTile
+  friction: 0
+  heatCapacity: 10000
