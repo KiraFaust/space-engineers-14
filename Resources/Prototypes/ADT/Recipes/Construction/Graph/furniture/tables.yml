@@ -6,17 +6,6 @@
       actions:
         - !type:DeleteEntity {}
       edges:
-        - to: adttableroulette
-          completed:
-            - !type:SnapToGrid
-              southRotation: true
-          steps:
-            - material: WoodPlank
-              amount: 6
-              doAfter: 6
-            - material: Cloth
-              amount: 4
-              doAfter: 4
         - to: adttableframe
           completed:
             - !type:SnapToGrid
@@ -88,24 +77,6 @@
         - to: adttableplastic
           steps:
             - material: Plastic
-              amount: 1
-              doAfter: 1
-
-        - to: adttableuraniumglass
-          steps:
-            - material: UraniumGlass
-              amount: 1
-              doAfter: 1
-
-        - to: adttablereinforcedplasmaglass
-          steps:
-            - material: ReinforcedPlasmaGlass
-              amount: 1
-              doAfter: 1
-
-        - to: adttablereinforceduraniumglass
-          steps:
-            - material: ReinforcedUraniumGlass
               amount: 1
               doAfter: 1
 
@@ -333,16 +304,3 @@
           steps:
             - tool: Anchoring
               doAfter: 1
-
-    - node: adtcablereel
-      entity: ADTCableReel
-      edges:
-        - to: start
-          completed:
-            - !type:SpawnPrototype
-              prototype: MaterialWoodPlank1
-              amount: 3
-            - !type:DeleteEntity {}
-          steps:
-            - tool: Prying
-              doAfter: 5
