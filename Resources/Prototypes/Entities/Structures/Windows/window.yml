@@ -243,6 +243,12 @@
     state: frosted_window
   - type: StaticPrice
     price: 35
+  - type: Occluder
+    polygon:
+    - "-0.5,-0.5"
+    - "0.5,-0.5"
+    - "0.5,-0.25"
+    - "-0.5,-0.25"
 
 - type: entity
   parent: Window

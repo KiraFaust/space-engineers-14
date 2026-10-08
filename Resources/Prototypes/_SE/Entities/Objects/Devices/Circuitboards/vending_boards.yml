@@ -33,5 +33,3 @@
     state: command
   - type: MachineBoard
     prototype: VendingMachineHoP
-    stackRequirements:
-      Manipulator: 2
