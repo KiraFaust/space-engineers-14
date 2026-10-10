@@ -5,7 +5,7 @@
   components:
   - type: JukeboxCassette
   - type: Sprite
-    sprite: _SE/Objects/Devices/cassette.rsi
+    sprite: _SE/Objects/Misc/cassette.rsi
     state: cassette_nt
   - type: Item
     size: Small
