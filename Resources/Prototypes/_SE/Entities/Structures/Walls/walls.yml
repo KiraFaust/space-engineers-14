@@ -108,9 +108,9 @@
   - type: Sprite
     sprite: _SE/Structures/Walls/Krisswall.rsi
   - type: WallReplacementMarker
-  - type: Construction
-    graph: Girder
-    node: WallKrissSolid
+#  - type: Construction
+#    graph: Girder
+#    node: WallKrissSolid
   - type: Icon
     sprite: _SE/Structures/Walls/Krisswall.rsi
   - type: RCDDeconstructable

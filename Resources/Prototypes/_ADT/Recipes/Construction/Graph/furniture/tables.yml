@@ -46,14 +46,6 @@
             - material: Glass
               amount: 4
               doAfter: 4
-        - to: adtcablereel
-          completed:
-            - !type:SnapToGrid
-              southRotation: true
-          steps:
-            - material: WoodPlank
-              amount: 5
-              doAfter: 5
     - node: adttableframe
       entity: ADTTableFrame
       edges:
