@@ -721,11 +721,11 @@
 # COLORED
 - type: entity
   parent: Airlock
-  id: AirlockPurpleTest
+  id: AirlockPurple
   name: airlock
   components:
   - type: Sprite
-    sprite: SE/Structures/Doors/Airlocks/Standard/colored_basic.rsi
+    sprite: _SE/Structures/Doors/Airlocks/Standard/colored_basic.rsi
     snapCardinals: true
     layers:
     - state: closed_color
