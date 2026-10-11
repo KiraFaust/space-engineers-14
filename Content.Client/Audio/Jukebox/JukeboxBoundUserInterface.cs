@@ -6,21 +6,21 @@ using Robust.Client.Player;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using System.Linq;
-using Robust.Shared.Audio.Systems; // _SE
 namespace Content.Client.Audio.Jukebox;
 
 public sealed partial class JukeboxBoundUserInterface : BoundUserInterface
 {
     [Dependency] private IPlayerManager _player = default!;
     [Dependency] private IPrototypeManager _protoManager = default!;
-    [Dependency] private SharedAudioSystem _audio = default!;
+    private AudioSystem _audio = default!;
 
     [ViewVariables]
     private JukeboxMenu? _menu;
 
     public JukeboxBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
-        IoCManager.InjectDependencies(this);
+        IoCManager.InjectDependencies(this); // остальные зависимости внедрятся
+        _audio = EntMan.System<AudioSystem>(); // получаем систему явн
     }
 
     protected override void Open()
