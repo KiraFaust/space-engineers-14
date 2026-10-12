@@ -182,4 +182,3 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
