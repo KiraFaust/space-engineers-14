@@ -67,7 +67,7 @@
               doAfter: 2
           completed:
             - !type:SpawnPrototype
-              prototype: Uranium1
+              prototype: SheetUranium1
               amount: 2
 
     - node: fanWelded
@@ -121,7 +121,7 @@
               prototype: SheetSteel1
               amount: 1
             - !type:SpawnPrototype
-              prototype: Uranium1
+              prototype: SheetUranium1
               amount: 2
             - !type:SpawnPrototype
               prototype: IngotGold1
@@ -195,7 +195,7 @@
               doAfter: 2
           completed:
             - !type:SpawnPrototype
-              prototype: Uranium1
+              prototype: SheetUranium1
               amount: 2
 
     - node: fanWelded
@@ -249,7 +249,7 @@
               prototype: SheetSteel1
               amount: 1
             - !type:SpawnPrototype
-              prototype: Uranium1
+              prototype: SheetUranium1
               amount: 2
             - !type:SpawnPrototype
               prototype: IngotGold1

@@ -68,7 +68,6 @@
   id: AtmosDeviceFanTinyAssembly
   name: fan assembly
   description: A partially constructed fan.
-  parent: BaseStructure
   components:
     - type: Transform
       noRot: false
@@ -76,9 +75,24 @@
       sprite: Structures/Piping/Atmospherics/tinyfan.rsi
       state: assembly
       noRot: false
+    - type: Anchorable
     - type: Construction
       graph: AtmosDeviceFanTiny
       node: fanFrame
+    - type: Clickable
+    - type: GravityAffected
+    - type: Physics
+      bodyType: Static
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+              bounds: "-0.48,-0.48,0.48,-0.40"
+    - type: Pullable
+    - type: Tag
+      tags:
+        - Structure
 
 - type: entity
   id: AtmosDeviceFanDirectionalAssembly
@@ -92,7 +106,22 @@
       sprite: Structures/Piping/Atmospherics/directionalfan.rsi
       state: assembly
       noRot: false
+    - type: Anchorable
     - type: Construction
       graph: AtmosDeviceFanDirectional
       node: fanFrame
+    - type: Clickable
+    - type: GravityAffected
+    - type: Physics
+      bodyType: Static
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+              bounds: "-0.48,-0.48,0.48,-0.40"
+    - type: Pullable
+    - type: Tag
+      tags:
+        - Structure
 # _SE end
