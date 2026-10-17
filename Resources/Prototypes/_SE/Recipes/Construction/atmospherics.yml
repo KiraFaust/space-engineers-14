@@ -1,0 +1,21 @@
+- type: construction
+  parent: BaseStructureFullTile
+  id: AtmosDeviceFanTiny
+  graph: AtmosDeviceFanTiny
+  startNode: start
+  targetNode: fanDone
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+
+- type: construction
+  parent: BaseStructureFullTileDirectional
+  id: AtmosDeviceFanDirectional
+  graph: AtmosDeviceFanDirectional
+  startNode: start
+  targetNode: fanDone
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true

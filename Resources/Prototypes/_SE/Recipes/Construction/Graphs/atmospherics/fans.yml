@@ -1,0 +1,256 @@
+
+- type: constructionGraph
+  id: AtmosDeviceFanTiny
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DeleteEntity
+      edges:
+        - to: fanFrame
+          completed:
+            - !type:SetAnchor
+              value: false
+          steps:
+            - material: Steel
+              amount: 5
+              doAfter: 5
+
+    - node: fanFrame
+      entity: AtmosDeviceFanTinyAssembly
+      edges:
+        - to: fanGold
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - material: Gold
+              amount: 2
+              doAfter: 2
+        - to: start
+          steps:
+            - tool: Prying
+              doAfter: 5
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+
+    - node: fanGold
+      edges:
+        - to: fanUranium
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - material: Uranium
+              amount: 2
+              doAfter: 2
+        - to: fanFrame
+          steps:
+            - tool: Prying
+              doAfter: 2
+          completed:
+            - !type:SpawnPrototype
+              prototype: IngotGold1
+              amount: 2
+
+    - node: fanUranium
+      edges:
+        - to: fanWelded
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - tool: Welding
+              doAfter: 5
+        - to: fanGold
+          steps:
+            - tool: Prying
+              doAfter: 2
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetUranium1
+              amount: 2
+
+    - node: fanWelded
+      edges:
+        - to: fanSteel
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: fanUranium
+          steps:
+            - tool: Welding
+              doAfter: 5
+
+    - node: fanSteel
+      edges:
+        - to: fanDone
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: fanWelded
+          steps:
+            - tool: Prying
+              doAfter: 1
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 1
+
+    - node: fanDone
+      entity: AtmosDeviceFanTiny
+      edges:
+        - to: fanFrame
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Prying
+              doAfter: 1
+            - tool: Welding
+              doAfter: 5
+            - tool: Prying
+              doAfter: 2
+            - tool: Prying
+              doAfter: 2
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetUranium1
+              amount: 2
+            - !type:SpawnPrototype
+              prototype: IngotGold1
+              amount: 2
+
+- type: constructionGraph
+  id: AtmosDeviceFanDirectional
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DeleteEntity
+      edges:
+        - to: fanFrame
+          completed:
+            - !type:SetAnchor
+              value: false
+          steps:
+            - material: Steel
+              amount: 5
+              doAfter: 5
+
+    - node: fanFrame
+      entity: AtmosDeviceFanDirectionalAssembly
+      edges:
+        - to: fanGold
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - material: Gold
+              amount: 2
+              doAfter: 2
+        - to: start
+          steps:
+            - tool: Prying
+              doAfter: 5
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+
+    - node: fanGold
+      edges:
+        - to: fanUranium
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - material: Uranium
+              amount: 2
+              doAfter: 2
+        - to: fanFrame
+          steps:
+            - tool: Prying
+              doAfter: 2
+          completed:
+            - !type:SpawnPrototype
+              prototype: IngotGold1
+              amount: 2
+
+    - node: fanUranium
+      edges:
+        - to: fanWelded
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - tool: Welding
+              doAfter: 5
+        - to: fanGold
+          steps:
+            - tool: Prying
+              doAfter: 2
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetUranium1
+              amount: 2
+
+    - node: fanWelded
+      edges:
+        - to: fanSteel
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: fanUranium
+          steps:
+            - tool: Welding
+              doAfter: 5
+
+    - node: fanSteel
+      edges:
+        - to: fanDone
+          conditions:
+            - !type:EntityAnchored
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: fanWelded
+          steps:
+            - tool: Prying
+              doAfter: 1
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 1
+
+    - node: fanDone
+      entity: AtmosDeviceFanDirectional
+      edges:
+        - to: fanFrame
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Prying
+              doAfter: 1
+            - tool: Welding
+              doAfter: 5
+            - tool: Prying
+              doAfter: 2
+            - tool: Prying
+              doAfter: 2
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetUranium1
+              amount: 2
+            - !type:SpawnPrototype
+              prototype: IngotGold1
+              amount: 2

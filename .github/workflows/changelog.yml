@@ -1,0 +1,77 @@
+name: Changelog to Discord
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'Resources/Changelog/Changelog.yml'
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Send new changelog entries
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: |
+          python3 - <<'PY'
+          import os, json, subprocess, yaml, urllib.request
+
+          path = 'Resources/Changelog/Changelog.yml'
+          webhook = os.environ['DISCORD_WEBHOOK']
+
+          def load(ref):
+              try:
+                  data = subprocess.check_output(
+                      ['git', 'show', f'{ref}:{path}'],
+                      text=True
+                  )
+                  return yaml.safe_load(data) or {}
+              except subprocess.CalledProcessError:
+                  return {}
+
+          def entries(doc):
+              if isinstance(doc, dict):
+                  return doc.get('Entries', [])
+              return doc or []
+
+          cur = load('HEAD')
+          old = load('HEAD^')
+
+          old_ids = {str(e.get('id')) for e in entries(old)}
+          new_entries = [
+              e for e in entries(cur)
+              if str(e.get('id')) not in old_ids
+          ]
+
+          for e in new_entries:
+              lines = []
+              for c in e.get('changes', []):
+                  lines.append(f"**{c.get('type', 'Change')}**: {c.get('message', '')}")
+
+              embed = {
+                  "title": f"Changelog #{e.get('id')}",
+                  "url": e.get('url'),
+                  "description": "\n".join(lines) or "Без описания",
+                  "footer": {
+                      "text": f"Автор: {e.get('author', 'unknown')}"
+                  }
+              }
+
+              payload = {"embeds": [embed]}
+              req = urllib.request.Request(
+                  webhook,
+                  data=json.dumps(payload).encode(),
+                  headers={'Content-Type': 'application/json'}
+              )
+              urllib.request.urlopen(req)
+          PY
