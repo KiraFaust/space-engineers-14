@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "By Ko4erga (discord)",
+    "copyright": "By Ko4erga (discord), assembly made by frauvonfaust for Space Engineers 14: Vanguard",
     "size": {
         "x": 32,
         "y": 32
@@ -17,6 +17,10 @@
                     0.01
                 ]
             ]
+        },
+        {
+            "name": "assembly",
+            "directions": 4
         }
     ]
 }

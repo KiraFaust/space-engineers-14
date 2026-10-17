@@ -25,3 +25,24 @@
   path:
     path: /Audio/_SE/Jukebox/Sweden.ogg
   category: "Minecraft"
+
+- type: jukebox
+  id: MoogCity
+  name: C418 - Moog City
+  path:
+    path: /Audio/_SE/Jukebox/MoogCity.ogg
+  category: "Minecraft"
+
+- type: jukebox
+  id: MoogCity2
+  name: C418 - Moog City 2
+  path:
+    path: /Audio/_SE/Jukebox/MoogCity2.ogg
+  category: "Minecraft"
+
+- type: jukebox
+  id: Pigstep
+  name: Lena Raine - Pigstep
+  path:
+    path: /Audio/_SE/Jukebox/Pigstep.ogg
+  category: "Minecraft"

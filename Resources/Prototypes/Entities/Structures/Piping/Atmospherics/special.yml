@@ -25,6 +25,10 @@
   - type: Tag
     tags:
       - SpreaderIgnore
+  - type: Construction # _SE
+    graph: AtmosDeviceFanTiny # _SE
+    node: fanDone # _SE
+  - type: Anchorable # _SE
 
 - type: entity
   id: AtmosDeviceFanDirectional
@@ -54,3 +58,41 @@
   - type: Tag
     tags:
       - SpreaderIgnore
+  - type: Construction # _SE
+    graph: AtmosDeviceFanDirectional # _SE
+    node: fanDone # _SE
+  - type: Anchorable # _SE
+
+# _SE start
+- type: entity
+  id: AtmosDeviceFanTinyAssembly
+  name: fan assembly
+  description: A partially constructed fan.
+  parent: BaseStructure
+  components:
+    - type: Transform
+      noRot: false
+    - type: Sprite
+      sprite: Structures/Piping/Atmospherics/tinyfan.rsi
+      state: assembly
+      noRot: false
+    - type: Construction
+      graph: AtmosDeviceFanTiny
+      node: fanFrame
+
+- type: entity
+  id: AtmosDeviceFanDirectionalAssembly
+  name: directional fan assembly
+  description: A partially constructed directional fan.
+  parent: BaseStructure
+  components:
+    - type: Transform
+      noRot: false
+    - type: Sprite
+      sprite: Structures/Piping/Atmospherics/directionalfan.rsi
+      state: assembly
+      noRot: false
+    - type: Construction
+      graph: AtmosDeviceFanDirectional
+      node: fanFrame
+# _SE end
