@@ -1,0 +1,12 @@
+- type: entity
+  id: AlwaysPoweredStrobeLightRed
+  suffix: "Always powered, red"
+  parent: AlwaysPoweredStrobeLight
+  components:
+  - type: PointLight
+    lightMask: ConeDouble
+    color: "#ff0000"
+    energy: 5
+    radius: 10
+    softness: 1
+    offset: "0, 0.35"
