@@ -1,8 +1,10 @@
 - type: entity
-  abstract: true
+  id: BaseStructureComputer
   parent: BaseStructure
-  id: BaseStructureComputerIndestructible
+  abstract: true
   components:
+  - type: Physics
+    bodyType: Static
   - type: Fixtures
     fixtures:
       fix1:
@@ -19,21 +21,12 @@
   - type: Anchorable
   - type: Construction
     graph: Computer
+    node: frameUnsecured
   - type: Sprite
     drawdepth: Objects
-
-- type: entity
-  abstract: true
-  parent: BaseStructureComputerIndestructible
-  id: BaseStructureComputer
-  components:
-  - type: Construction
-    graph: Computer
-    node: frameUnsecured
   - type: Damageable
-    damageModifierSet: Electronic
-  - type: Injurable
     damageContainer: StructuralInorganic
+    damageModifierSet: Electronic
   - type: Destructible
     thresholds:
     - trigger:
@@ -71,7 +64,7 @@
           monitorUnsecured: { state: 4 }
 
 - type: entity
-  parent: BaseStructureComputerIndestructible
+  parent: BaseStructureComputer
   id: ComputerBroken
   name: broken computer
   description: This computer has seen better days.
@@ -79,16 +72,34 @@
   - type: Construction
     graph: Computer
     node: monitorBroken
-  - type: Damageable
-    damageModifierSet: Electronic
-  - type: Injurable
-    damageContainer: StructuralInorganic
   - type: Sprite
     sprite: Structures/Machines/computers.rsi
     drawdepth: Objects
-    state: broken
+    # ADT-Tweak start
+    layers:
+    - map: [ "computerLayerBody" ]
+      state: broken
+  - type: EdgeConnection
+    connectionKey: computer-console
+    allowedDirections: East, West
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.EdgeConnectionVisuals.ConnectionMask:
+        computerLayerBody:
+          None: { state: broken, sprite: Structures/Machines/computers.rsi }
+          West: { state: computer_r-broken, sprite: ADT/Structures/Machines/computers.rsi }
+          East: { state: computer_l-broken, sprite: ADT/Structures/Machines/computers.rsi }
+          East, West: { state: computer_l_r-broken, sprite: ADT/Structures/Machines/computers.rsi }
+  # ADT-Tweak end
   - type: Destructible
     thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
         damage: 50
