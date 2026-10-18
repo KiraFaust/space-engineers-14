@@ -50,9 +50,9 @@
   - type: Icon
     sprite: _SE/Structures/Walls/Krisswall.rsi
     state: rgeneric
-#  - type: Construction
-#    graph: Girder
-#    node: WallKrissReinforced
+  - type: Construction
+    graph: Girder
+    node: krissReinforcedWall
   - type: Damageable
     damageModifierSet: StructuralMetallicStrong
   - type: Injurable
@@ -108,9 +108,9 @@
   - type: Sprite
     sprite: _SE/Structures/Walls/Krisswall.rsi
   - type: WallReplacementMarker
-#  - type: Construction
-#    graph: Girder
-#    node: WallKrissSolid
+  - type: Construction
+    graph: Girder
+    node: krissWall
   - type: Icon
     sprite: _SE/Structures/Walls/Krisswall.rsi
   - type: RCDDeconstructable
@@ -177,9 +177,22 @@
         - FullTileMask
         layer:
         - WallLayer
-#  - type: Construction
-#    graph: Girder
-#    node: WallKrissSolidDiagonal
+  - type: Construction
+    graph: GirderDiagonal
+    node: diagonalKrissWall
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:ChangeConstructionNodeBehavior
+        node: girderDiagonal
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
 
 - type: entity
   parent: WallShuttleDiagonal
@@ -201,6 +214,6 @@
   - type: Icon
     sprite: _SE/Structures/Walls/Krisswall_armored_diagonal.rsi
     state: state0
-#  - type: Construction
-#    graph: Girder
-#    node: WallKrissReinforcedDiagonal
+  - type: Construction
+    graph: GirderDiagonal
+    node: diagonalKrissReinforcedWall

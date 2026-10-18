@@ -134,6 +134,21 @@
               amount: 2
               doAfter: 2
 
+        # _SE start
+        - to: krissWall
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - material: Steel
+              amount: 2
+              doAfter: 2
+        # _SE end
+
     - node: wall
       entity: WallSolid
       edges:
@@ -282,18 +297,35 @@
               amount: 2
               doAfter: 1
 
-        - to: diagonalshuttleWall
+        # _SE tweak start
+        # - to: diagonalshuttleWall
+        #   conditions:
+        #     - !type:EntityAnchored { }
+        #   steps:
+        #     - material: Steel
+        #       amount: 1
+        #       doAfter: 1
+        #     - tool: Welding
+        #       doAfter: 4
+        #     - material: Plasteel
+        #       amount: 1
+        #       doAfter: 1
+        # _SE tweak end
+
+        # _SE start
+        - to: krissReinforcedWall
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
           conditions:
             - !type:EntityAnchored { }
           steps:
-            - material: Steel
-              amount: 1
+            - tool: Screwing
               doAfter: 1
-            - tool: Welding
-              doAfter: 4
             - material: Plasteel
-              amount: 1
+              amount: 2
               doAfter: 1
+        # _SE end
 
         - to: girder
           completed:
@@ -469,39 +501,41 @@
             - tool: Cutting
               doAfter: 4
 
-    - node: diagonalshuttleWall
-      entity: WallShuttleDiagonal
-      edges:
-        - to: reinforcedGirder
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetPlasteel1
-              amount: 1
-            - !type:SpawnPrototype
-              prototype: SheetSteel1
-              amount: 1
-          steps:
-          #To-Do: Add deconstruct visuals
-            - tool: Welding
-              doAfter: 5
-            - tool: Cutting
-              doAfter: 1
-            - tool: Screwing
-              doAfter: 1
-            - tool: Welding
-              doAfter: 5
-            - tool: Prying
-              doAfter: 1
-            - tool: Anchoring
-              doAfter: 1
-            - tool: Welding
-              doAfter: 10
-            - tool: Prying
-              doAfter: 1
-            - tool: Screwing
-              doAfter: 1
-            - tool: Cutting
-              doAfter: 1
+    # _SE tweak start
+    # - node: diagonalshuttleWall
+    #   entity: WallShuttleDiagonal
+    #   edges:
+    #     - to: reinforcedGirder
+    #       completed:
+    #         - !type:SpawnPrototype
+    #           prototype: SheetPlasteel1
+    #           amount: 1
+    #         - !type:SpawnPrototype
+    #           prototype: SheetSteel1
+    #           amount: 1
+    #       steps:
+    #       #To-Do: Add deconstruct visuals
+    #         - tool: Welding
+    #           doAfter: 5
+    #         - tool: Cutting
+    #           doAfter: 1
+    #         - tool: Screwing
+    #           doAfter: 1
+    #         - tool: Welding
+    #           doAfter: 5
+    #         - tool: Prying
+    #           doAfter: 1
+    #         - tool: Anchoring
+    #           doAfter: 1
+    #         - tool: Welding
+    #           doAfter: 10
+    #         - tool: Prying
+    #           doAfter: 1
+    #         - tool: Screwing
+    #           doAfter: 1
+    #         - tool: Cutting
+    #           doAfter: 1
+    # _SE tweak end
 
     - node: wallrust
       entity: WallSolidRust
@@ -526,3 +560,69 @@
           steps:
             - tool: Brushing
               doAfter: 4
+
+    # _SE start
+    - node: krissWall
+      entity: WallKrissSolid
+      edges:
+        - to: girder
+          completed:
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 2
+          steps:
+            - tool: Welding
+              doAfter: 10
+
+    - node: krissReinforcedWall
+      entity: WallKrissReinforced
+      edges:
+        - to: reinforcedGirder
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 2
+          steps:
+            - tool: Cutting
+              doAfter: 1
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 5
+            - tool: Screwing
+              doAfter: 1
+            - tool: Welding
+              doAfter: 5
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 4
+            - tool: Prying
+              doAfter: 1
+            - tool: Anchoring
+              doAfter: 1
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 3
+            - tool: Welding
+              doAfter: 10
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 2
+            - tool: Prying
+              doAfter: 1
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 1
+            - tool: Screwing
+              doAfter: 1
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 0
+            - tool: Cutting
+              doAfter: 1
+    # _SE end

@@ -661,12 +661,17 @@
         damage: 300
       behaviors:
       - !type:ChangeConstructionNodeBehavior
-        node: girder
+        node: reinforcedGirderDiagonal # _SE
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  # _SE start
+  - type: Construction
+    graph: GirderDiagonal
+    node: diagonalReinforcedWall
+  # _SE end
   - type: RadiationBlocker
     resistance: 5
 
@@ -812,15 +817,17 @@
         damage: 300
       behaviors:
       - !type:ChangeConstructionNodeBehavior
-        node: girder
+        node: reinforcedGirderDiagonal # _SE
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: Construction
-    graph: Girder
-    node: diagonalshuttleWall
+  # _SE start
+    graph: GirderDiagonal
+    node: diagonalShuttleWall
+  # _SE end
   - type: RadiationBlocker
     resistance: 5
   - type: StaticPrice
@@ -944,12 +951,17 @@
         damage: 200
       behaviors:
       - !type:ChangeConstructionNodeBehavior
-        node: girder
+        node: girderDiagonal # _SE
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  # _SE start
+  - type: Construction
+    graph: GirderDiagonal
+    node: diagonalWall
+  # _SE end
 
 - type: entity
   parent: WallSolid

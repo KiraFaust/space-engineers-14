@@ -183,3 +183,74 @@
   conditions:
     - !type:TileNotBlocked
 
+- type: construction
+  parent: BaseStructureFullTile
+  id: GirderDiagonal
+  graph: GirderDiagonal
+  targetNode: girderDiagonal
+  canRotate: true
+
+- type: construction
+  parent: GirderDiagonal
+  id: ReinforcedGirderDiagonal
+  targetNode: reinforcedGirderDiagonal
+
+- type: construction
+  parent: GirderDiagonal
+  id: DiagonalWall
+  name: construction-recipe-diagonal-wall
+  targetNode: diagonalWall
+
+- type: construction
+  parent: GirderDiagonal
+  id: DiagonalReinforcedWall
+  name: construction-recipe-diagonal-reinforced-wall
+  targetNode: diagonalReinforcedWall
+
+- type: construction
+  parent: GirderDiagonal
+  id: DiagonalShuttleWall
+  name: construction-recipe-diagonal-shuttle-wall
+  targetNode: diagonalShuttleWall
+
+- type: construction
+  parent: BaseWindowDiagonal
+  id: ShuttleWindowDiagonal
+  name: construction-recipe-shuttle-window-diagonal
+  targetNode: shuttleWindowDiagonal
+
+- type: construction
+  parent: BaseWindowDiagonal
+  id: ReinforcedWindowKrissDiagonal
+  name: construction-recipe-window-kriss-diagonal
+  targetNode: reinforcedWindowKrissDiagonal
+
+- type: construction
+  parent: BaseWindow
+  id: ReinforcedWindowKriss
+  name: construction-recipe-window-kriss
+  targetNode: reinforcedWindowKriss
+
+- type: construction
+  parent: Girder
+  id: KrissWall
+  name: construction-recipe-kriss-wall
+  targetNode: krissWall
+
+- type: construction
+  parent: Girder
+  id: KrissReinforcedWall
+  name: construction-recipe-kriss-reinforced-wall
+  targetNode: krissReinforcedWall
+
+- type: construction
+  parent: GirderDiagonal
+  id: DiagonalKrissWall
+  name: construction-recipe-diagonal-kriss-wall
+  targetNode: diagonalKrissWall
+
+- type: construction
+  parent: GirderDiagonal
+  id: DiagonalKrissReinforcedWall
+  name: construction-recipe-diagonal-kriss-reinforced-wall
+  targetNode: diagonalKrissReinforcedWall

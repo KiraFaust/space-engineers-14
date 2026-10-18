@@ -1,0 +1,9 @@
+construction-recipe-diagonal-wall = обычная стена (диагональ)
+construction-recipe-diagonal-reinforced-wall = укреплённая стена (диагональ)
+construction-recipe-shuttle-window-diagonal = окно шаттла (диагональ)
+construction-recipe-window-kriss-diagonal = белое окно (диагональ)
+construction-recipe-window-kriss = белое окно
+construction-recipe-kriss-wall = белая обычная стена
+construction-recipe-kriss-reinforced-wall = белая укреплённая стена
+construction-recipe-diagonal-kriss-wall = белая обычная стена (диагональ)
+construction-recipe-diagonal-kriss-reinforced-wall = белая укреплённая стена (диагональ)

@@ -15,6 +15,6 @@ ent-WallKrissSolidDiagonal = белая диагональная обычная 
     .desc = Держит воздух внутри, а пассажиров снаружи.
     .suffix = Диагональ
 
-ent-WallKrissReinforcedDiagonal = белая диагональная обычная стена
+ent-WallKrissReinforcedDiagonal = белая диагональная укреплённая стена
     .desc = Держит воздух внутри, а пассажиров снаружи.
     .suffix = Диагональ
