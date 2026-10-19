@@ -1,0 +1,19 @@
+- type: paintableGroup
+  id: WallSolid
+  time: 2
+  cost: 4
+  defaultStyle: basic
+  styles:
+    basic: WallSolid
+    white: ADTWallSolidWhite
+    black: ADTWallSolidBlack
+    purple: ADTWallSolidPurple
+    red: ADTWallSolidRed
+    blue: ADTWallSolidBlue
+    teal: ADTWallSolidTeal
+    brown: ADTWallSolidBrown
+    gray: ADTWallSolidGray
+    green: ADTWallSolidGreen
+    lightBrown: ADTWallSolidLightBrown
+    orange: ADTWallSolidOrange
+    yellow: ADTWallSolidYellow

@@ -1,0 +1,4 @@
+- type: paintableGroupCategory
+  id: Walls
+  groups:
+  - WallSolid

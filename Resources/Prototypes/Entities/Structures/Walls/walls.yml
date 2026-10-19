@@ -922,6 +922,8 @@
   - type: IconSmooth
     key: walls
     base: solid
+  - type: Paintable
+    group: WallSolid
 
 - type: entity
   parent: WallDiagonalBase
