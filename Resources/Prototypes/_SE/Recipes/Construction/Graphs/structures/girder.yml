@@ -52,6 +52,14 @@
               amount: 2
               doAfter: 2
 
+        - to: diagonalMonasteryFrame
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+
     - node: diagonalWall
       entity: WallSolidDiagonal
       edges:
@@ -274,3 +282,57 @@
               doAfter: 1
             - tool: Cutting
               doAfter: 1
+
+    - node: diagonalMonasteryFrame
+      entity: GirderDiagonal
+      edges:
+        - to: diagonalMonasteryGrayWall
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - material: Steel
+              amount: 4
+              doAfter: 2
+
+        - to: diagonalMonasteryBrownWall
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Steel
+              amount: 4
+              doAfter: 2
+
+        - to: girderDiagonal
+          completed:
+            - !type:GivePrototype
+              prototype: PartRodMetal1
+              amount: 2
+          steps:
+            - tool: Cutting
+              doAfter: 1
+
+    - node: diagonalMonasteryGrayWall
+      entity: WallMonasteryGrayDiagonal
+      edges:
+        - to: diagonalMonasteryFrame
+          completed:
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 4
+          steps:
+            - tool: Welding
+              doAfter: 10
+
+    - node: diagonalMonasteryBrownWall
+      entity: WallMonasteryBrownDiagonal
+      edges:
+        - to: diagonalMonasteryFrame
+          completed:
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 4
+          steps:
+            - tool: Welding
+              doAfter: 10

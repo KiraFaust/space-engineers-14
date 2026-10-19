@@ -266,3 +266,27 @@
   id: RivetedWall
   name: construction-recipe-riveted-wall
   targetNode: rivetedWall
+
+- type: construction
+  parent: Girder
+  id: MonasteryGrayWall
+  name: construction-recipe-monastery-gray-wall
+  targetNode: monasteryGrayWall
+
+- type: construction
+  parent: Girder
+  id: MonasteryBrownWall
+  name: construction-recipe-monastery-brown-wall
+  targetNode: monasteryBrownWall
+
+- type: construction
+  parent: GirderDiagonal
+  id: DiagonalMonasteryGrayWall
+  name: construction-recipe-diagonal-monastery-gray-wall
+  targetNode: diagonalMonasteryGrayWall
+
+- type: construction
+  parent: GirderDiagonal
+  id: DiagonalMonasteryBrownWall
+  name: construction-recipe-diagonal-monastery-brown-wall
+  targetNode: diagonalMonasteryBrownWall

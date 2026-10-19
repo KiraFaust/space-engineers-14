@@ -147,6 +147,14 @@
             - material: Steel
               amount: 2
               doAfter: 2
+
+        - to: monasteryFrame
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
         # _SE end
 
     - node: wall
@@ -692,4 +700,64 @@
                   data: 0
             - tool: Cutting
               doAfter: 1
+              
+    - node: monasteryFrame
+      entity: Girder
+      edges:
+        - to: monasteryGrayWall
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - material: Steel
+              amount: 4
+              doAfter: 2
+
+        - to: monasteryBrownWall
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Steel
+              amount: 4
+              doAfter: 2
+
+        - to: girder
+          completed:
+            - !type:GivePrototype
+              prototype: PartRodMetal1
+              amount: 2
+          steps:
+            - tool: Cutting
+              doAfter: 1
+
+    - node: monasteryGrayWall
+      entity: WallMonasteryGray
+      edges:
+        - to: monasteryFrame
+          completed:
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 4
+          steps:
+            - tool: Welding
+              doAfter: 10
+
+    - node: monasteryBrownWall
+      entity: WallMonasteryBrown
+      edges:
+        - to: monasteryFrame
+          completed:
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 4
+          steps:
+            - tool: Welding
+              doAfter: 10
     # _SE end

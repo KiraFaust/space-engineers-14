@@ -220,3 +220,116 @@
   - type: Construction
     graph: GirderDiagonal
     node: diagonalKrissReinforcedWall
+
+- type: entity
+  parent: WallSolid
+  id: WallMonasteryBase
+  abstract: true
+  components:
+  - type: IconSmooth
+    key: walls
+    base: plastitanium
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  parent: WallMonasteryBase
+  id: WallMonasteryGray
+  name: gray monastery wall
+  description: You seem to hear the ringing of bells.
+  components:
+  - type: Sprite
+    sprite: _SE/Structures/Walls/monastery_gray.rsi
+    state: full
+  - type: Icon
+    sprite: _SE/Structures/Walls/monastery_gray.rsi
+    state: full
+  - type: Construction
+    graph: Girder
+    node: monasteryGrayWall
+
+- type: entity
+  parent: WallMonasteryBase
+  id: WallMonasteryBrown
+  name: brown monastery wall
+  description: You seem to hear the ringing of bells.
+  components:
+  - type: Sprite
+    sprite: _SE/Structures/Walls/monastery_brown.rsi
+    state: full
+  - type: Icon
+    sprite: _SE/Structures/Walls/monastery_brown.rsi
+    state: full
+  - type: Construction
+    graph: Girder
+    node: monasteryBrownWall
+
+- type: entity
+  parent: WallSolidDiagonal
+  id: WallMonasteryDiagonalBase
+  abstract: true
+  components:
+  - type: IconSmooth
+    key: walls
+    base: state
+    mode: Diagonal
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:ChangeConstructionNodeBehavior
+        node: girderDiagonal
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  parent: WallMonasteryDiagonalBase
+  id: WallMonasteryGrayDiagonal
+  name: gray monastery wall
+  suffix: diagonal
+  description: You seem to hear the ringing of bells.
+  components:
+  - type: Sprite
+    sprite: _SE/Structures/Walls/monastery_gray_diagonal.rsi
+    state: state0
+    drawdepth: Walls
+  - type: Icon
+    sprite: _SE/Structures/Walls/monastery_gray_diagonal.rsi
+    state: state0
+  - type: Construction
+    graph: GirderDiagonal
+    node: diagonalMonasteryGrayWall
+
+- type: entity
+  parent: WallMonasteryDiagonalBase
+  id: WallMonasteryBrownDiagonal
+  name: brown monastery wall
+  suffix: diagonal
+  description: You seem to hear the ringing of bells.
+  components:
+  - type: Sprite
+    sprite: _SE/Structures/Walls/monastery_brown_diagonal.rsi
+    state: state0
+    drawdepth: Walls
+  - type: Icon
+    sprite: _SE/Structures/Walls/monastery_brown_diagonal.rsi
+    state: state0
+  - type: Construction
+    graph: GirderDiagonal
+    node: diagonalMonasteryBrownWall
