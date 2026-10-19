@@ -707,6 +707,11 @@
     base: riveted
   - type: StaticPrice
     price: 150
+  # _SE start
+  - type: Construction
+    graph: Girder
+    node: rivetedWall
+  # _SE end
 
 - type: entity
   parent: BaseWall

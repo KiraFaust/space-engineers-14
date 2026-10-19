@@ -325,6 +325,37 @@
             - material: Plasteel
               amount: 2
               doAfter: 1
+
+        - to: rivetedWall
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          conditions:
+            - !type:EntityAnchored { }
+          steps:
+            - tool: Welding
+              doAfter: 10
+            - material: MetalRod
+              amount: 4
+              doAfter: 1
+            - material: Plasteel
+              amount: 2
+              doAfter: 1
+            - material: Plasteel
+              amount: 2
+              doAfter: 1
+            - tool: Welding
+              doAfter: 5
+            - material: Plasteel
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+            - material: MetalRod
+              amount: 4
+              doAfter: 1
+            - tool: Welding
+              doAfter: 10
         # _SE end
 
         - to: girder
@@ -536,6 +567,42 @@
     #         - tool: Cutting
     #           doAfter: 1
     # _SE tweak end
+
+    # _SE start
+    - node: rivetedWall
+      entity: WallRiveted
+      edges:
+        - to: reinforcedGirder
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 6
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 4
+          steps:
+          #To-Do: Add deconstruct visuals
+            - tool: Welding
+              doAfter: 5
+            - tool: Cutting
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+            - tool: Welding
+              doAfter: 5
+            - tool: Prying
+              doAfter: 1
+            - tool: Anchoring
+              doAfter: 1
+            - tool: Welding
+              doAfter: 10
+            - tool: Prying
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+            - tool: Cutting
+              doAfter: 1
+    # _SE end
 
     - node: wallrust
       entity: WallSolidRust

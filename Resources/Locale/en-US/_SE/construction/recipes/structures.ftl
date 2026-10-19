@@ -7,3 +7,5 @@ construction-recipe-kriss-wall = white wall
 construction-recipe-kriss-reinforced-wall = white reinforced wall
 construction-recipe-diagonal-kriss-wall = white wall (diagonal)
 construction-recipe-diagonal-kriss-reinforced-wall = white reinforced wall (diagonal)
+construction-recipe-riveted-wall = riveted wall
+construction-recipe-diagonal-riveted-wall = riveted wall (diagonal)

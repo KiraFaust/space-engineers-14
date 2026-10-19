@@ -254,3 +254,15 @@
   id: DiagonalKrissReinforcedWall
   name: construction-recipe-diagonal-kriss-reinforced-wall
   targetNode: diagonalKrissReinforcedWall
+
+- type: construction
+  parent: GirderDiagonal
+  id: DiagonalRivetedWall
+  name: construction-recipe-diagonal-riveted-wall
+  targetNode: diagonalRivetedWall
+
+- type: construction
+  parent: Girder
+  id: RivetedWall
+  name: construction-recipe-riveted-wall
+  targetNode: rivetedWall

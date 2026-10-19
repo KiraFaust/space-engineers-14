@@ -7,3 +7,5 @@ construction-recipe-kriss-wall = белая обычная стена
 construction-recipe-kriss-reinforced-wall = белая укреплённая стена
 construction-recipe-diagonal-kriss-wall = белая обычная стена (диагональ)
 construction-recipe-diagonal-kriss-reinforced-wall = белая укреплённая стена (диагональ)
+construction-recipe-riveted-wall = клёпаная стена
+construction-recipe-diagonal-riveted-wall = клёпаная стена (диагональ)

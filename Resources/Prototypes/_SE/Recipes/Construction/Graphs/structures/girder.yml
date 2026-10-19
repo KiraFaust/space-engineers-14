@@ -98,6 +98,34 @@
               amount: 2
               doAfter: 1
 
+        - to: diagonalRivetedWall
+          conditions:
+            - !type:EntityAnchored { }
+          steps:
+            - tool: Welding
+              doAfter: 10
+            - material: MetalRod
+              amount: 4
+              doAfter: 1
+            - material: Plasteel
+              amount: 2
+              doAfter: 1
+            - material: Plasteel
+              amount: 2
+              doAfter: 1
+            - tool: Welding
+              doAfter: 5
+            - material: Plasteel
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+            - material: MetalRod
+              amount: 4
+              doAfter: 1
+            - tool: Welding
+              doAfter: 10
+
         - to: girderDiagonal
           completed:
             - !type:SpawnPrototype
@@ -194,6 +222,40 @@
               amount: 2
           steps:
           # TODO: add deconstruction stage visuals
+            - tool: Cutting
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+            - tool: Welding
+              doAfter: 5
+            - tool: Prying
+              doAfter: 1
+            - tool: Anchoring
+              doAfter: 1
+            - tool: Welding
+              doAfter: 10
+            - tool: Prying
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+            - tool: Cutting
+              doAfter: 1
+
+    - node: diagonalRivetedWall
+      entity: WallRivetedDiagonal
+      edges:
+        - to: reinforcedGirderDiagonal
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 6
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 4
+          steps:
+          # TODO: Add deconstruct visuals
+            - tool: Welding
+              doAfter: 5
             - tool: Cutting
               doAfter: 1
             - tool: Screwing
