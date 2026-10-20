@@ -5,3 +5,7 @@ ent-ClothingUniformJumpsuitVanguardQuartermaster = пыльно-сливовый
 ent-ClothingUniformJumpsuitVanguardQuartermasterFormal = пыльно-сливовый мундир
     .desc = Формальный мундир пыльно-сливового цвета, явно созданный для высокоранговых офицеров. Имеет золотой аксельбант и эполеты.
     .suffix = Авангард-Квартирмейстер, Торжественный
+
+ent-ClothingUniformJumpsuitHeadOfPersonnelFormal = синий рабочий костюм
+    .desc = Безвкусный костюм, подходящий для того, чтобы исчезнуть с лица Вселенной. Впрочем, он отнюдь не уродлив.
+    .suffix = Глава Персонала, Торжественный
