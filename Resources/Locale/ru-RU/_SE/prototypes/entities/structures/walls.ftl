@@ -15,6 +15,20 @@ ent-WallKrissSolidDiagonal = белая диагональная обычная 
     .desc = Держит воздух внутри, а пассажиров снаружи.
     .suffix = Диагональ
 
-ent-WallKrissReinforcedDiagonal = белая диагональная обычная стена
+ent-WallKrissReinforcedDiagonal = белая диагональная укреплённая стена
     .desc = Держит воздух внутри, а пассажиров снаружи.
+    .suffix = Диагональ
+
+ent-WallMonasteryBrown = коричневая монастырская стена
+    .desc = Кажется, вы слышите звон колоколов.
+
+ent-WallMonasteryGray = серая монастырская стена
+    .desc = Кажется, вы слышите звон колоколов.
+
+ent-WallMonasteryBrownDiagonal = коричневая монастырская стена
+    .desc = Кажется, вы слышите звон колоколов.
+    .suffix = Диагональ
+
+ent-WallMonasteryGrayDiagonal = серая монастырская стена
+    .desc = Кажется, вы слышите звон колоколов.
     .suffix = Диагональ

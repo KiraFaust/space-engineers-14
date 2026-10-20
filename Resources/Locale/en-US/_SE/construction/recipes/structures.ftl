@@ -1,0 +1,15 @@
+construction-recipe-diagonal-wall = wall (diagonal)
+construction-recipe-diagonal-reinforced-wall = reinforced wall (diagonal)
+construction-recipe-shuttle-window-diagonal = shuttle window (diagonal)
+construction-recipe-window-kriss-diagonal = white window (diagonal)
+construction-recipe-window-kriss = white window
+construction-recipe-kriss-wall = white wall
+construction-recipe-kriss-reinforced-wall = white reinforced wall
+construction-recipe-diagonal-kriss-wall = white wall (diagonal)
+construction-recipe-diagonal-kriss-reinforced-wall = white reinforced wall (diagonal)
+construction-recipe-riveted-wall = riveted wall
+construction-recipe-diagonal-riveted-wall = riveted wall (diagonal)
+construction-recipe-monastery-gray-wall = gray monastery wall
+construction-recipe-monastery-brown-wall = brown monastery wall
+construction-recipe-diagonal-monastery-gray-wall = gray monastery wall (diagonal)
+construction-recipe-diagonal-monastery-brown-wall = brown monastery wall (diagonal)
