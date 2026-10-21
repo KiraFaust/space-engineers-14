@@ -26,6 +26,9 @@
         },
         {
             "name": "pda-vqm"
+        },
+        {
+            "name": "pda-medic"
         }
     ]
 }
