@@ -115,12 +115,14 @@
   id: ShuttleWall
   targetNode: shuttleWall
 
-- type: construction
-  parent: Girder
-  id: DiagonalShuttleWall
-  name: construction-recipe-diagonal-shuttle-wall
-  targetNode: diagonalshuttleWall
-  canRotate: true
+# _SE tweak start
+# - type: construction
+#   parent: Girder
+#   id: DiagonalShuttleWall
+#   name: construction-recipe-diagonal-shuttle-wall
+#   targetNode: diagonalshuttleWall
+#   canRotate: true
+# _SE tweak end
 
 - type: construction
   parent: Girder

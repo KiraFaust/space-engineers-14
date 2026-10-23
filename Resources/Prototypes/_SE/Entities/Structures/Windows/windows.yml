@@ -46,9 +46,9 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     base: rwindow
-#  - type: Construction
-#    graph: Window
-#    node: reinforcedWindow
+  - type: Construction
+    graph: Window
+    node: reinforcedWindowKriss
   - type: Appearance
   - type: DamageVisuals
     thresholds: [5, 10, 20]
@@ -73,6 +73,7 @@
   - type: Tag
     tags:
     - Diagonal
+    - Window
   - type: IconSmooth
     mode: Diagonal
     key: walls
@@ -101,6 +102,6 @@
   - type: DamageVisuals
     damageOverlay:
       sprite: Structures/Windows/cracks_diagonal.rsi
-#  - type: Construction
-#    graph: WindowDiagonal
-#    node: reinforcedWindowDiagonal
+  - type: Construction
+    graph: WindowDiagonal
+    node: reinforcedWindowKrissDiagonal

@@ -661,12 +661,17 @@
         damage: 300
       behaviors:
       - !type:ChangeConstructionNodeBehavior
-        node: girder
+        node: reinforcedGirderDiagonal # _SE
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  # _SE start
+  - type: Construction
+    graph: GirderDiagonal
+    node: diagonalReinforcedWall
+  # _SE end
   - type: RadiationBlocker
     resistance: 5
 
@@ -702,6 +707,11 @@
     base: riveted
   - type: StaticPrice
     price: 150
+  # _SE start
+  - type: Construction
+    graph: Girder
+    node: rivetedWall
+  # _SE end
 
 - type: entity
   parent: BaseWall
@@ -812,15 +822,17 @@
         damage: 300
       behaviors:
       - !type:ChangeConstructionNodeBehavior
-        node: girder
+        node: reinforcedGirderDiagonal # _SE
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: Construction
-    graph: Girder
-    node: diagonalshuttleWall
+  # _SE start
+    graph: GirderDiagonal
+    node: diagonalShuttleWall
+  # _SE end
   - type: RadiationBlocker
     resistance: 5
   - type: StaticPrice
@@ -922,6 +934,8 @@
   - type: IconSmooth
     key: walls
     base: solid
+  - type: Paintable
+    group: WallSolid
 
 - type: entity
   parent: WallDiagonalBase
@@ -942,12 +956,17 @@
         damage: 200
       behaviors:
       - !type:ChangeConstructionNodeBehavior
-        node: girder
+        node: girderDiagonal # _SE
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  # _SE start
+  - type: Construction
+    graph: GirderDiagonal
+    node: diagonalWall
+  # _SE end
 
 - type: entity
   parent: WallSolid

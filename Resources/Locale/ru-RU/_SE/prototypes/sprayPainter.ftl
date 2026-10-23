@@ -1,0 +1,13 @@
+spray-painter-style-wallsolid-basic = Стандарт
+spray-painter-style-wallsolid-black = Чёрный
+spray-painter-style-wallsolid-lightbrown = Бежевый
+spray-painter-style-wallsolid-orange = Оранжевый
+spray-painter-style-wallsolid-yellow = Жёлтый
+spray-painter-style-wallsolid-blue = Голубой
+spray-painter-style-wallsolid-purple = Фиолетовый
+spray-painter-style-wallsolid-brown = Коричневый
+spray-painter-style-wallsolid-red = Красный
+spray-painter-style-wallsolid-gray = Серый
+spray-painter-style-wallsolid-teal = Морская волна
+spray-painter-style-wallsolid-white = Белый
+spray-painter-style-wallsolid-green = Зелёный

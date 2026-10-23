@@ -94,46 +94,15 @@
     base: digital
 
 # Colored walls
-
 - type: entity
-  parent: BaseWall
+  parent: WallSolid
   id: ADTWallSolidWhite
   name: white solid wall
   components:
   - type: Sprite
     sprite: _ADT/Structures/Walls/white_solid.rsi
-  - type: WallReplacementMarker
   - type: Icon
     sprite: _ADT/Structures/Walls/white_solid.rsi
-  - type: RCDDeconstructable
-    cost: 6
-    delay: 8
-    fx: EffectRCDDeconstruct8
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 400
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalSlam
-    - trigger:
-        !type:DamageTrigger
-        damage: 200
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalSlam
-      - !type:ChangeConstructionNodeBehavior
-        node: girder
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: IconSmooth
-    key: walls
-    base: solid
 
 - type: entity
   parent: ADTWallSolidWhite
