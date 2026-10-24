@@ -38,7 +38,7 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpskirtAdjutantAlt
-  name: grey jumpsuit with blue jacket
+  name: grey jumpsuit with blue vest
   description:
   suffix: Adjutant
   components:

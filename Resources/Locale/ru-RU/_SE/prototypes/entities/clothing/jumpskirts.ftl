@@ -9,3 +9,27 @@ ent-ClothingUniformJumpskirtVanguardQuartermasterFormal = пыльно-слив�
 ent-ClothingUniformJumpskirtHeadOfPersonnelFormal = синий рабочий костюм с юбкой
     .desc = Безвкусный костюм, подходящий для того, чтобы исчезнуть с лица Вселенной. Впрочем, он отнюдь не уродлив.
     .suffix = Глава Персонала, Торжественный
+
+ent-ClothingUniformJumpskirtAdjutant = классическая белая рубашка с синим жилетом
+    .desc = { "" }
+    .suffix = Адъютант, Торжественный
+
+ent-ClothingUniformJumpskirtAdjutantAlt = серый комбинезон с синей жилеткой
+    .desc = { "" }
+    .suffix = Адъютант
+
+ent-ClothingUniformJumpskirtSalvageSpecialist = синяя юбка-комбинезон с юбкой на лямках
+    .desc = Нарядная юбка-комбинезон с прочной юбкой на лямках. Очень грязная.
+    .suffix = Утилизатор
+
+ent-ClothingUniformJumpskirtSalvageSpecialistFormal = синяя юбка-комбинезон с подтяжками
+    .desc = На вид грязная, прочная и практичная, но в ней явно проскальзывают частички чего-то стильного. Выглядит как что-то, созданное для важных встреч.
+    .suffix = Утилизатор, Торжественный
+
+ent-ClothingUniformJumpskirtHopFormal = синяя униформа с белой рубашкой и юбкой
+    .desc = Торжественная униформа для какого-то бюрократического менеджера. Выглядит идеально чистой.
+    .suffix = Глава Персонала, Торжественный
+
+ent-ClothingUniformJumpskirtCaptainOfficer = королевско-синяя офицерская униформа с юбкой
+    .desc = Очень удобная и круто выглядит.
+    .suffix = Капитан, Повседневная

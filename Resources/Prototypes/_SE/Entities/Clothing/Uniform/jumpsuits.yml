@@ -75,7 +75,7 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitPajamasResearchDirector
-  name:
+  name: misty purple pajamas with golden trim
   description:
   suffix: Research Director, Pajamas
   components:
@@ -100,7 +100,7 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitAdjutantAlt
-  name: grey jumpsuit with blue jacket
+  name: grey jumpsuit with blue vest
   description:
   suffix: Adjutant
   components:
@@ -129,9 +129,9 @@
   suffix: Salvage, Formal
   components:
   - type: Sprite
-    sprite: _SE/Clothing/Uniform/Jumpsuits/hop.rsi
+    sprite: _SE/Clothing/Uniform/Jumpsuits/salvageformal.rsi
   - type: Clothing
-    sprite: _SE/Clothing/Uniform/Jumpsuits/hop.rsi
+    sprite: _SE/Clothing/Uniform/Jumpsuits/salvageformal.rsi
 
 - type: entity
   parent: ClothingUniformBase

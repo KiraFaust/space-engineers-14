@@ -9,3 +9,50 @@ ent-ClothingUniformJumpsuitVanguardQuartermasterFormal = пыльно-сливо
 ent-ClothingUniformJumpsuitHeadOfPersonnelFormal = синий рабочий костюм
     .desc = Безвкусный костюм, подходящий для того, чтобы исчезнуть с лица Вселенной. Впрочем, он отнюдь не уродлив.
     .suffix = Глава Персонала, Торжественный
+
+ent-ClothingUniformJumpsuitPajamasCaptain = королевско-синяя пижама с золотыми полосками и пуговицами
+    .desc = Торжественная пижама для громогласных объявлений на пижамных вечеринках. Ощущение, будто надел облако вместо одежды.
+    .suffix = Капитан, Пижамы
+
+ent-ClothingUniformJumpsuitPajamasChiefEngineer = жёлтая светоотражающая пижама
+    .desc = Странная смесь инженерной униформы, пижамы и светоотражающего жилета. Довольно крепкая, но невероятно удобная, как и положено любой пижаме.
+    .suffix = Старший Инженер, Пижамы
+
+ent-ClothingUniformJumpsuitPajamasChiefMedicalOfficer = белая медицинская пижама
+    .desc = Стерильная, практичная и комфортная белая пижама с синим крестом на животе. Такая не для операционной, ГВ!
+    .suffix = Главный Врач, Пижамы
+
+ent-ClothingUniformJumpsuitPajamasQuartermaster = оранжевая пижама
+    .desc = { "" }
+    .suffix = Квартирмейстер, Пижамы
+
+ent-ClothingUniformJumpsuitPajamasResearchDirector = туманно-фиолетовая пижама с золотистой окантовкой
+    .desc = { "" }
+    .suffix = Научный Руководитель, Пижамы
+
+ent-ClothingUniformJumpsuitAdjutant = классическая белая рубашка с синим жилетом
+    .desc = { "" }
+    .suffix = Адъютант, Торжественный
+
+ent-ClothingUniformJumpsuitAdjutantAlt = серый комбинезон с синей жилеткой
+    .desc = { "" }
+    .suffix = Адъютант
+
+ent-ClothingUniformJumpsuitSalvageSpecialistFormal = синий комбинезон с подтяжками
+    .desc = На вид грязный, прочный и практичный, но в нём явно проскальзывают частички чего-то стильного. Выглядит как что-то, созданное для важных встреч.
+    .suffix = Утилизатор, Торжественный
+
+ent-ClothingUniformJumpsuitChiefEngineerFormal = торжественный жёлтый костюм с рабочим комбинезоном
+    .desc = Очень стильный комбинезон офисного кроя для деловых встреч. Легко чистится.
+    .suffix = Старший Инженер, Торжественный
+
+ent-ClothingUniformJumpsuitHopFormal = синяя униформа с жилетом и белой рубашкой
+    .desc = Торжественная униформа для какого-то бюрократического менеджера. Выглядит идеально чистой.
+    .suffix = Глава Персонала, Торжественный
+
+ent-ClothingUniformJumpsuitCaptainOfficer = королевско-синяя офицерская униформа
+    .desc = Повседневная униформа для какого-то высокопоставленного офицера. Очень удобная и круто выглядит.
+    .suffix = Капитан, Повседневная
+
+ent-ClothingUniformJumpsuitMimicryEGOSuit = костюм Э.Г.О. "Мимикрия" из плоти
+    .desc = Комплект униформы из плоти, источающий угрожающую ауру
