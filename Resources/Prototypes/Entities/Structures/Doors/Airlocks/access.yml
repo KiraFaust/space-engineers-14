@@ -371,6 +371,10 @@
   id: AirlockHeadOfPersonnelLocked
   suffix: HeadOfPersonnel, Locked
   components:
+  # _SE start
+  - type: Sprite
+    sprite: _ADT/Structures/Doors/Airlocks/Standard/hop.rsi
+  # _SE end
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ]
