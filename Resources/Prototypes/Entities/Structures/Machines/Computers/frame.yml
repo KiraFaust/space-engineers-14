@@ -89,9 +89,9 @@
       enum.EdgeConnectionVisuals.ConnectionMask:
         computerLayerBody:
           None: { state: broken, sprite: Structures/Machines/computers.rsi }
-          West: { state: computer_r-broken, sprite: ADT/Structures/Machines/computers.rsi }
-          East: { state: computer_l-broken, sprite: ADT/Structures/Machines/computers.rsi }
-          East, West: { state: computer_l_r-broken, sprite: ADT/Structures/Machines/computers.rsi }
+          West: { state: computer_r-broken, sprite: _ADT/Structures/Machines/computers.rsi }
+          East: { state: computer_l-broken, sprite: _ADT/Structures/Machines/computers.rsi }
+          East, West: { state: computer_l_r-broken, sprite: _ADT/Structures/Machines/computers.rsi }
   # ADT-Tweak end
   - type: Destructible
     thresholds:
