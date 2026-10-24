@@ -99,90 +99,178 @@ ent-AirlockOldSyndicateLocked = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Устаревший, Синдикат, Закрыт
 
+ent-AirlockPurple = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Фиолетовый
+
 # Standard Hatches
 ent-AirlockHatchAtmos = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Атмос
 
+ent-AirlockHatchAtmosLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Атмос, Закрыт
+
 ent-AirlockHatchAtmosBlack = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Атмос, Тёмный
+
+ent-AirlockHatchAtmosBlackLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Атмос, Тёмный, Закрыт
 
 ent-AirlockHatchBotany = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Ботаника
 
+ent-AirlockHatchBotanyLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Ботаника, Закрыт
+
 ent-AirlockHatchBotanyBlack = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Ботаника, Тёмный
+
+ent-AirlockHatchBotanyBlackLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Ботаника, Тёмный, Закрыт
 
 ent-AirlockHatchChem = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Химия
 
+ent-AirlockHatchChemLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Химия, Закрыт
+
 ent-AirlockHatchChemBlack = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Химия, Тёмный
+
+ent-AirlockHatchChemBlackLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Химия, Тёмный, Закрыт
 
 ent-AirlockHatchClear = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Чистый
 
+ent-AirlockHatchClearLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Чистый, Закрыт
+
 ent-AirlockHatchClearBlack = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Чистый, Тёмный
+
+ent-AirlockHatchClearBlackLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Чистый, Тёмный, Закрыт
 
 ent-AirlockHatchComm = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Командный
 
+ent-AirlockHatchCommLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Командный, Закрыт
+
 ent-AirlockHatchCommBlack = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Командный, Тёмный
+
+ent-AirlockHatchCommBlackLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Командный, Тёмный, Закрыт
 
 ent-AirlockHatchDorm = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Дормы
 
+ent-AirlockHatchDormLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Дормы, Закрыт
+
 ent-AirlockHatchDormBlack = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Дормы, Тёмный
+
+ent-AirlockHatchDormBlackLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Дормы, Тёмный, Закрыт
 
 ent-AirlockHatchEngineer = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Инженерный
 
+ent-AirlockHatchEngineerLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Инженерный, Закрыт
+
 ent-AirlockHatchEngineerBlack = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Инженерный, Тёмный
 
-# ent-AirlockHatchMaint = шлюз
-#    .desc = Он открывается, он закрывается, и он может вас раздавить.
-#    .suffix = Технический
+ent-AirlockHatchEngineerBlackLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Инженерный, Тёмный, Закрыт
+
+ent-AirlockHatchMaint = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Технический
+
+ent-AirlockHatchMaintLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Технический, Закрыт
 
 ent-AirlockHatchMaintenanceBlack = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Технический, Тёмный
 
+ent-AirlockHatchMaintenanceBlackLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Технический, Тёмный, Закрыт
+
 ent-AirlockHatchMedical = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Медицинский
+
+ent-AirlockHatchMedicalLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Медицинский, Закрыт
 
 ent-AirlockHatchMedicalBlack = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Медицинский, Тёмный
 
+ent-AirlockHatchMedicalBlackLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Медицинский, Тёмный, Закрыт
+
 ent-AirlockHatchScience = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Научный
+
+ent-AirlockHatchScienceLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Научный, Закрыт
 
 ent-AirlockHatchScienceBlack = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Научный, Тёмный
 
+ent-AirlockHatchScienceBlackLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Научный, Тёмный, Закрыт
+
 ent-AirlockHatchSecurityBlack = шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Стража, Тёмный
+
+ent-AirlockHatchSecurityBlackLocked = шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Стража, Тёмный, Закрыт
 
 # Glass Airlocks
 ent-AirlockGlassSecurityOld = стеклянный шлюз
@@ -302,81 +390,161 @@ ent-AirlockHatchAtmosGlass = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Атмос
 
+ent-AirlockHatchAtmosGlassLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Атмос, Закрыт
+
 ent-AirlockHatchAtmosGlassBlack = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Атмос, Тёмный
+
+ent-AirlockHatchAtmosGlassBlackLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Атмос, Тёмный, Закрыт
 
 ent-AirlockHatchBotanyGlass = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Ботаника
 
+ent-AirlockHatchBotanyGlassLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Ботаника, Закрыт
+
 ent-AirlockHatchBotanyGlassBlack = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Ботаника, Тёмный
+
+ent-AirlockHatchBotanyGlassBlackLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Ботаника, Тёмный, Закрыт
 
 ent-AirlockHatchChemGlass = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Химия
 
+ent-AirlockHatchChemGlassLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Химия, Закрыт
+
 ent-AirlockHatchChemGlassBlack = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Химия, Тёмный
+
+ent-AirlockHatchChemGlassBlackLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Химия, Тёмный, Закрыт
 
 ent-AirlockHatchClearGlass = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Чистый
 
+ent-AirlockHatchClearGlassLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Чистый, Закрыт
+
 ent-AirlockHatchClearGlassBlack = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Чистый, Тёмный
+
+ent-AirlockHatchClearGlassBlackLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Чистый, Тёмный, Закрыт
 
 ent-AirlockHatchCommGlass = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Командный
 
+ent-AirlockHatchCommGlassLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Командный, Закрыт
+
 ent-AirlockHatchCommGlassBlack = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Командный, Тёмный
+
+ent-AirlockHatchCommGlassBlackLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Командный, Тёмный, Закрыт
 
 ent-AirlockHatchDormGlass = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Дормы
 
+ent-AirlockHatchDormGlassLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Дормы, Закрыт
+
 ent-AirlockHatchDormGlassBlack = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Дормы, Тёмный
+
+ent-AirlockHatchDormGlassBlackLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Дормы, Тёмный, Закрыт
 
 ent-AirlockHatchEngineerGlass = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Инженерный
 
+ent-AirlockHatchEngineerGlassLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Инженерный, Закрыт
+
 ent-AirlockHatchEngineerGlassBlack = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Инженерный, Тёмный
+
+ent-AirlockHatchEngineerGlassBlackLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Инженерный, Тёмный, Закрыт
 
 ent-AirlockHatchMaintenanceGlass = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Технический
 
+ent-AirlockHatchMaintenanceGlassLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Технический, Закрыт
+
 ent-AirlockHatchMaintenanceGlassBlack = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Технический, Тёмный
+
+ent-AirlockHatchMaintenanceGlassBlackLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Технический, Тёмный, Закрыт
 
 ent-AirlockHatchMedicalGlass = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Медицинский
 
+ent-AirlockHatchMedicalGlassLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Медицинский, Закрыт
+
 ent-AirlockHatchMedicalGlassBlack = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Медицинский, Тёмный
+
+ent-AirlockHatchMedicalGlassBlackLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Медицинский, Тёмный, Закрыт
 
 ent-AirlockHatchScienceGlass = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Научный
 
+ent-AirlockHatchScienceGlassLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Научный, Закрыт
+
 ent-AirlockHatchScienceGlassBlack = стеклянный шлюз
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Научный, Тёмный
+
+ent-AirlockHatchScienceGlassBlackLocked = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Научный, Тёмный, Закрыт
 
 # Big / Medium Glass Airlocks
 ent-BigGlassAirlockBase = большой стеклянный шлюз
