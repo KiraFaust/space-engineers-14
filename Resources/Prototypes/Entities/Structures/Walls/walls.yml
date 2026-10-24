@@ -671,6 +671,8 @@
   - type: Construction
     graph: GirderDiagonal
     node: diagonalReinforcedWall
+  - type: StaticPrice
+    price: 230
   # _SE end
   - type: RadiationBlocker
     resistance: 5
@@ -711,6 +713,8 @@
   - type: Construction
     graph: Girder
     node: rivetedWall
+  - type: StaticPrice
+    price: 490
   # _SE end
 
 - type: entity
