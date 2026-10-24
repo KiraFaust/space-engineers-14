@@ -223,7 +223,7 @@
     graph: GirderDiagonal
     node: diagonalKrissReinforcedWall
   - type: StaticPrice
-    price: 200
+    price: 230
 
 
 - type: entity
