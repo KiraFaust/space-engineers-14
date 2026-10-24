@@ -64,7 +64,7 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitPajamasQuartermaster
   name: orange pajamas
-  description:
+  description: It smells of a unique mix of money and dusty crates. On another day you could hardly tell it apart from paper.
   suffix: Quartermaster, Pajamas
   components:
   - type: Sprite
@@ -76,7 +76,7 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitPajamasResearchDirector
   name: misty purple pajamas with golden trim
-  description:
+  description: If you stare at it long enough, the salvagers on the other side of the portal will start staring back at you...
   suffix: Research Director, Pajamas
   components:
   - type: Sprite
@@ -89,7 +89,7 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitAdjutant
   name: classical white shirt with blue vest
-  description:
+  description: A jumpsuit, that is made to show status. Status of Command. Command's helper, of course.
   suffix: Adjutant, Formal
   components:
   - type: Sprite
@@ -100,8 +100,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitAdjutantAlt
-  name: grey jumpsuit with blue vest
-  description:
+  name: blue turtleneck
+  description: A blue uniform that is specialized for field operations. Healing toolbox is build-in.
   suffix: Adjutant
   components:
   - type: Sprite

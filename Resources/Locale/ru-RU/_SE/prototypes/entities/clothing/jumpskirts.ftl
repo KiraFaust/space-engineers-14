@@ -11,11 +11,11 @@ ent-ClothingUniformJumpskirtHeadOfPersonnelFormal = синий рабочий к
     .suffix = Глава Персонала, Торжественный
 
 ent-ClothingUniformJumpskirtAdjutant = классическая белая рубашка с синим жилетом
-    .desc = { "" }
+    .desc = Юбка-комбинезон, созданная, чтобы показать статус. Статус командования. Помощницы командования, конечно.
     .suffix = Адъютант, Торжественный
 
-ent-ClothingUniformJumpskirtAdjutantAlt = серый комбинезон с синей жилеткой
-    .desc = { "" }
+ent-ClothingUniformJumpskirtAdjutantAlt = синяя юбка-водолазка
+    .desc = Синяя водолазка с юбкой, чтобы служить главам даже на холодных станциях.
     .suffix = Адъютант
 
 ent-ClothingUniformJumpskirtSalvageSpecialist = синяя юбка-комбинезон с юбкой на лямках

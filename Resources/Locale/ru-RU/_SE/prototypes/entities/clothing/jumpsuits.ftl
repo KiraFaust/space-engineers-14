@@ -23,19 +23,19 @@ ent-ClothingUniformJumpsuitPajamasChiefMedicalOfficer = белая медици�
     .suffix = Главный Врач, Пижамы
 
 ent-ClothingUniformJumpsuitPajamasQuartermaster = оранжевая пижама
-    .desc = { "" }
+    .desc = От неё веет уникальной смесью запахов денег и пыльных коробок. В иной день вы бы не отличили её от бумаги.
     .suffix = Квартирмейстер, Пижамы
 
 ent-ClothingUniformJumpsuitPajamasResearchDirector = туманно-фиолетовая пижама с золотистой окантовкой
-    .desc = { "" }
+    .desc = Если долго вглядываться в неё, то утилизаторы по ту сторону портала начнут вглядываться в вас в ответ...
     .suffix = Научный Руководитель, Пижамы
 
 ent-ClothingUniformJumpsuitAdjutant = классическая белая рубашка с синим жилетом
-    .desc = { "" }
+    .desc = Комбинезон, созданный, чтобы показать статус. Статус командования. Помощника командования, конечно.
     .suffix = Адъютант, Торжественный
 
-ent-ClothingUniformJumpsuitAdjutantAlt = серый комбинезон с синей жилеткой
-    .desc = { "" }
+ent-ClothingUniformJumpsuitAdjutantAlt = синяя водолазка
+    .desc = Синяя униформа, предназначенная для полевых операций. Имеет встроенный лечебный ящик для инструментов.
     .suffix = Адъютант
 
 ent-ClothingUniformJumpsuitSalvageSpecialistFormal = синий комбинезон с подтяжками
