@@ -34,3 +34,12 @@ ent-TableReinforcedUraniumGlass = стол из уранового бронес�
 
 ent-TableUraniumGlass = стол из уранового стекла
     .desc = Квадратный кусок уранового стекла на четырёх ножках.
+
+ent-CoffeeTableBase = кофейный столик
+    .desc = Простой кофейный столик.
+
+ent-CoffeeTableFrame = каркас кофейного столика
+    .desc = Металлические ножки, составляющие основу столика.
+
+ent-ADTChairBarStool = барный стул
+    .desc = Это стул.

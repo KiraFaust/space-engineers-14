@@ -26,9 +26,7 @@ public sealed partial class JukeboxSystem : SharedJukeboxSystem
         SubscribeLocalEvent<JukeboxComponent, AfterAutoHandleStateEvent>(OnJukeboxAfterState);
 
         _protoManager.PrototypesReloaded += OnProtoReload;
-
-        // Apply current volume on init and react to changes in real-time
-        _cfg.OnValueChanged(CCVars.JukeboxVolume, OnJukeboxVolumeChanged, true);
+        _cfg.OnValueChanged(CCVars.JukeboxVolume, OnJukeboxVolumeChanged);
     }
 
     public override void Shutdown()
@@ -55,6 +53,9 @@ public sealed partial class JukeboxSystem : SharedJukeboxSystem
 
     private void OnJukeboxAfterState(Entity<JukeboxComponent> ent, ref AfterAutoHandleStateEvent args)
     {
+        if (ent.Comp.AudioStream != null && TryComp(ent.Comp.AudioStream, out AudioComponent? audioComp))
+            Audio.SetGain(ent.Comp.AudioStream, _cfg.GetCVar(CCVars.JukeboxVolume), audioComp);
+
         if (!_uiSystem.TryGetOpenUi<JukeboxBoundUserInterface>(ent.Owner, JukeboxUiKey.Key, out var bui))
             return;
 
@@ -92,9 +93,7 @@ public sealed partial class JukeboxSystem : SharedJukeboxSystem
     private void UpdateAppearance(Entity<SpriteComponent> entity, JukeboxVisualState visualState, JukeboxComponent component)
     {
         //SetLayerState(JukeboxVisualLayers.Base, component.OffState, entity); // Lua
-        // Lu start
-        var vol = _cfg.GetCVar(CCVars.JukeboxVolume);
-        if (component.AudioStream != null && TryComp(component.AudioStream, out AudioComponent? audioComp)) Audio.SetGain(component.AudioStream, vol, audioComp);
+        // Lua start
         _sprite.LayerSetVisible(entity.AsNullable(), JukeboxVisualLayers.Base, true);
 
         var hasStatic = _sprite.LayerMapTryGet(entity.AsNullable(), JukeboxVisualLayers.OverlayStatic, out _, false);
@@ -167,15 +166,6 @@ public sealed partial class JukeboxSystem : SharedJukeboxSystem
         var query = EntityQueryEnumerator<JukeboxComponent>();
         while (query.MoveNext(out var _, out var comp))
         { if (comp.AudioStream != null && TryComp(comp.AudioStream, out AudioComponent? audio)) Audio.SetGain(comp.AudioStream, value, audio); }
-    }
-
-    public override void Update(float frameTime)
-    {
-        base.Update(frameTime);
-        var vol = _cfg.GetCVar(CCVars.JukeboxVolume);
-        var query = EntityQueryEnumerator<JukeboxComponent>();
-        while (query.MoveNext(out var _, out var comp))
-        { if (comp.AudioStream != null && TryComp(comp.AudioStream, out AudioComponent? audio)) Audio.SetGain(comp.AudioStream, vol, audio); }
     }
     // Lua end
 

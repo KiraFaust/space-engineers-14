@@ -1,7 +1,7 @@
 - type: entity
   id: CommandTechFabCircuitboard
   parent: BaseMachineCircuitboard
-  name: ammo techfab circuit board
+  name: command techfab circuit board
   description: A machine printed circuit board for an command techfab.
   components:
     - type: Sprite
