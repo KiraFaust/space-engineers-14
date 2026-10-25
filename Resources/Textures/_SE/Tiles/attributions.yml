@@ -7,3 +7,8 @@
   license: "CC-BY-SA-3.0"
   copyright: "Was made by Not_so_big_chungus"
   source: "https://github.com/KiraFaust/space-engineers-14"
+
+- files: ["lattice.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "tgstation commit 8abb19545828230d92ba18827feeb42a67a55d49"
+  source: "https://github.com/tgstation/tgstation/"
