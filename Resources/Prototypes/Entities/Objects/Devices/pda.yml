@@ -19,6 +19,11 @@
       map: [ "enum.PdaVisualLayers.Flashlight" ]
       shader: "unshaded"
       visible: false
+    # _SE start
+    - state: "insert_overlay"
+      map: [ "enum.PdaVisualLayers.CardVisible" ]
+      visible: false
+    # _SE end
     - state: "id_overlay"
       map: [ "enum.PdaVisualLayers.IdLight" ]
       shader: "unshaded"

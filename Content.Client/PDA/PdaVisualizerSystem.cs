@@ -20,7 +20,9 @@ public sealed partial class PdaVisualizerSystem : VisualizerSystem<PdaVisualsCom
         if (args.TryGetData<bool>(PdaVisuals.IdCardInserted, out var isCardInserted))
         {
             SpriteSystem.LayerSetVisible((uid, args.Sprite), PdaVisualLayers.IdLight, isCardInserted);
-            SpriteSystem.LayerSetVisible((uid, args.Sprite), PdaVisualLayers.CardVisible, isCardInserted);
+
+            if (SpriteSystem.TryGetLayer((uid, args.Sprite), PdaVisualLayers.CardVisible, out _, false))
+                SpriteSystem.LayerSetVisible((uid, args.Sprite), PdaVisualLayers.CardVisible, isCardInserted);
         }
     }
 

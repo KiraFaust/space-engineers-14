@@ -32,7 +32,6 @@
   - type: Construction
     graph: AtmosDeviceFanTiny
     node: fanDone
-  - type: Pullable
   - type: Anchorable
   # _SE end
 
@@ -71,7 +70,6 @@
   - type: Construction
     graph: AtmosDeviceFanDirectional
     node: fanDone
-  - type: Pullable
   - type: Anchorable
   # _SE end
 

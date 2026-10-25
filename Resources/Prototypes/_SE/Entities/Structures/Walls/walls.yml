@@ -84,7 +84,10 @@
         acts: ["Destruction"]
   - type: IconSmooth
     key: walls
-    base: reinf_over
+    states:
+    - !type:CornerSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: reinf_over
   - type: Appearance
   - type: GenericVisualizer
     visuals:
@@ -144,7 +147,10 @@
         acts: ["Destruction"]
   - type: IconSmooth
     key: walls
-    base: solid
+    states:
+    - !type:CornerSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: solid
   - type: StaticPrice
     price: 230
 
@@ -163,9 +169,11 @@
     sprite: _SE/Structures/Walls/Krisswall_diagonal.rsi
     state: state0
   - type: IconSmooth
-    mode: Diagonal
     key: walls
-    base: state
+    states:
+    - !type:DiagonalSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: state
   - type: Icon
     sprite: _SE/Structures/Walls/Krisswall_diagonal.rsi
     state: state0
@@ -213,9 +221,11 @@
     sprite: _SE/Structures/Walls/Krisswall_armored_diagonal.rsi
     state: state0
   - type: IconSmooth
-    mode: Diagonal
     key: walls
-    base: state
+    states:
+    - !type:DiagonalSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: state
   - type: Icon
     sprite: _SE/Structures/Walls/Krisswall_armored_diagonal.rsi
     state: state0
@@ -233,7 +243,10 @@
   components:
   - type: IconSmooth
     key: walls
-    base: plastitanium
+    states:
+    - !type:CornerSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: plastitanium
   - type: Destructible
     thresholds:
     - trigger:
@@ -287,8 +300,10 @@
   components:
   - type: IconSmooth
     key: walls
-    base: state
-    mode: Diagonal
+    states:
+    - !type:DiagonalSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: state
   - type: Destructible
     thresholds:
     - trigger:
