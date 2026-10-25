@@ -25,7 +25,7 @@
     damage:
       types:
         Piercing: 10
-        Structural: 8
+        Structural: 9
   - type: Item
     size: Normal
     shape:
@@ -41,7 +41,7 @@
 
 - type: entity
   name: mining drill
-  parent: BaseItem
+  parent: [BaseCorvaxContraband432DepartmentsCargo, BaseItem] # Corvax-Contraband
   id: MiningDrill
   description: Powerful tool used to quickly drill through rocks.
   components:
@@ -78,7 +78,7 @@
     damage:
       types:
         Piercing: 5
-        Structural: 8
+        Structural: 12
 
 - type: entity
   abstract: true
@@ -100,7 +100,7 @@
 
 # Very high burst damage if you land a mark, while also providing a small amount of healing.
 - type: entity
-  parent: [BaseWeaponCrusher, BaseSecurityCargoContraband]
+  parent: [BaseCorvaxContraband432DepartmentsCargo, BaseWeaponCrusher, BaseSecurityCargoContraband] # Corvax-Contraband
   id: WeaponCrusher
   components:
   - type: Tag
@@ -158,14 +158,14 @@
       types:
         Blunt: 6
         Slash: 2
-        Structural: 8
+        Structural: 12
   - type: GunRequiresWield
   - type: DisarmMalus
   - type: Prying
 
 # No mark ability in exchange for wideswing, autoattack, and being one-handed
 - type: entity
-  parent: [ BaseKnife, BaseWeaponCrusher, BaseSecurityCargoContraband]
+  parent: [BaseCorvaxContraband432DepartmentsCargo, BaseKnife, BaseWeaponCrusher, BaseSecurityCargoContraband] # Corvax-Contraband
   id: WeaponCrusherDagger
   name: crusher dagger
   description: A scaled down version of a proto-kinetic crusher. Uses kinetic energy to vibrate the blade at high speeds.
@@ -257,4 +257,4 @@
       types:
         Blunt: 2
         Slash: 6
-        Structural: 8
+        Structural: 12
