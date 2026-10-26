@@ -3,6 +3,7 @@ using Content.Client.IconSmoothing;
 using Content.IntegrationTests.Fixtures;
 using Content.IntegrationTests.Fixtures.Attributes;
 using Content.IntegrationTests.Utility;
+using Content.Shared._SE.Doors.Components; // _SE
 using Content.Shared.Fluids.Components;
 using Content.Shared.Maps;
 using Robust.Shared.GameObjects;
@@ -186,6 +187,13 @@ public sealed class IconSmoothTest : GameTest
                 // Puddles will disable icon smooth and delete themselves if empty or un-anchored so they will fuck up the test.
                 if (!SProtoMan.Resolve(proto, out var resolved) || resolved.HasComp<PuddleComponent>(SEntMan.ComponentFactory))
                     continue;
+
+                // _SE start
+                if (resolved.HasComp<EnlargedAirlockComponent>(SEntMan.ComponentFactory))
+                {
+                    continue;
+                }
+                // _SE end
 
                 _spawned.Add(SEntMan.SpawnEntity(proto, new EntityCoordinates(TestMap!.Grid, x + 0.5f, y + 0.5f)));
             }
