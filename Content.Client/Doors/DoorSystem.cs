@@ -22,6 +22,9 @@ public sealed partial class DoorSystem : SharedDoorSystem
         comp.OpenSpriteStates = new(hasColor ? 2 : 1); // _SE
         comp.ClosedSpriteStates = new(hasColor ? 2 : 1); // _SE
 
+        comp.OpenSpriteStates.Add((DoorVisualLayers.Base, comp.OpenSpriteState));
+        comp.ClosedSpriteStates.Add((DoorVisualLayers.Base, comp.ClosedSpriteState));
+
         // _SE start
         if (hasColor)
         {
