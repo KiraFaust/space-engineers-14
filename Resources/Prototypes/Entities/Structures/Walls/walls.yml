@@ -563,7 +563,7 @@
   - type: IconSmooth
     key: marble
     states:
-    - !type:CardinalCornerSpriteSmoothing
+    - !type:CornerSpriteSmoothing # _SE
       mask: [ marble ]
       altMask: [ walls, windows, grilles, doors ]
       base: wall
