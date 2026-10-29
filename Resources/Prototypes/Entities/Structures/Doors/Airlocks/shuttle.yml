@@ -19,6 +19,7 @@
         - AirlockLayer
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/shuttle-base.rsi
+    snapCardinals: false # _SE
     layers:
     - state: docking-clamp
       offset: 0, -1
@@ -53,11 +54,13 @@
       shader: unshaded
       visible: false
       map: ["enum.ElectrifiedLayers.Sparks"]
-    - state: sparks
-      sprite: Structures/Doors/Airlocks/Effects/airlock-effects.rsi
-      map: ["enum.DoorVisualLayers.BaseEmagging"]
-      shader: unshaded
-      visible: false
+    # _SE start
+    #- state: sparks
+    #  sprite: Structures/Doors/Airlocks/Effects/airlock-effects.rsi
+    #  map: ["enum.DoorVisualLayers.BaseEmagging"]
+    #  shader: unshaded
+    #  visible: false
+    # _SE end
   - type: Wires
     layoutId: Docking
   - type: Door
