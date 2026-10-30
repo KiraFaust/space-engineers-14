@@ -564,8 +564,7 @@
     key: marble
     states:
     - !type:CornerSpriteSmoothing # _SE
-      mask: [ marble ]
-      altMask: [ walls, windows, grilles, doors ]
+      mask: [ walls, windows, grilles, marble, doors ] # _SE
       base: wall
   - type: Fixtures
     fixtures:
