@@ -9,7 +9,7 @@
   components:
   - type: Sprite
     sprite: Structures/Wallmounts/defib-cabinet.rsi
-    offset: 0, -0.25
+    #offset: 0, -0.25 # _SE
     layers:
     - state: frame
     - state: fill
