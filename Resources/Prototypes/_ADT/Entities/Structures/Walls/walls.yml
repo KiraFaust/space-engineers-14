@@ -10,7 +10,12 @@
     sprite: _ADT/Structures/Walls/digital_wall.rsi
   - type: IconSmooth
     key: walls
-    base: digital
+    # _SE start
+    states:
+    - !type:CornerSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: digital
+    # _SE end
   - type: Destructible
     thresholds:
       - trigger:
@@ -32,7 +37,12 @@
     sprite: _ADT/Structures/Walls/digital_red_wall.rsi
   - type: IconSmooth
     key: walls
-    base: digital
+    # _SE start
+    states:
+    - !type:CornerSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: digital
+    # _SE end
 
 - type: entity
   parent: ADTDigitalWall
@@ -46,7 +56,12 @@
     sprite: _ADT/Structures/Walls/digital_blue_wall.rsi
   - type: IconSmooth
     key: walls
-    base: digital
+    # _SE start
+    states:
+    - !type:CornerSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: digital
+    # _SE end
 
 - type: entity
   parent: BaseWall
@@ -61,7 +76,12 @@
     sprite: _ADT/Structures/Walls/digital_wall.rsi
   - type: IconSmooth
     key: walls
-    base: digital
+    # _SE start
+    states:
+    - !type:CornerSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: digital
+    # _SE end
 
 - type: entity
   parent: BaseWall
@@ -76,7 +96,12 @@
     sprite: _ADT/Structures/Walls/digital_red_wall.rsi
   - type: IconSmooth
     key: walls
-    base: digital
+    # _SE start
+    states:
+    - !type:CornerSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: digital
+    # _SE end
 
 - type: entity
   parent: BaseWall
@@ -91,7 +116,12 @@
     sprite: _ADT/Structures/Walls/digital_blue_wall.rsi
   - type: IconSmooth
     key: walls
-    base: digital
+    # _SE start
+    states:
+    - !type:CornerSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: digital
+    # _SE end
 
 # Colored walls
 - type: entity

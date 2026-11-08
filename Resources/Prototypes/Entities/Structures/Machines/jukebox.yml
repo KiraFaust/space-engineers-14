@@ -21,9 +21,13 @@
   - type: Appearance
   - type: ApcPowerReceiver
     powerLoad: 100
-  - type: ContainerContainer # _SE
+  # _SE start
+  - type: ContainerContainer
     containers:
       jukebox-cassettes: !type:Container
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  # _SE end
   - type: ExtensionCableReceiver
   - type: ActivatableUI
     key: enum.JukeboxUiKey.Key
@@ -39,7 +43,7 @@
     boardName: wires-board-name-jukebox
     layoutId: Jukebox
   - type: Damageable
-    damageModifierSet: Metallic
+    damageModifierSet: WoodMod
   - type: Destructible
     thresholds:
     - trigger:

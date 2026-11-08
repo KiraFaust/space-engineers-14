@@ -53,6 +53,8 @@
       temperature: 293.15
   - type: Jetpack
     moleUsage: 0.00085
+  - type: ParticleEmitter
+    effectPrototype: JetpackEffect
   - type: Appearance
   - type: GenericVisualizer
     visuals:
@@ -116,7 +118,7 @@
 #Empty black
 - type: entity
   id: JetpackBlack
-  parent: [BaseJetpack, BaseSyndicateContraband]
+  parent: [BaseJetpack] # Corvax-Contraband BaseSyndicateContraband
   name: jetpack
   suffix: Empty
   components:
@@ -169,7 +171,8 @@
     tags:
     - HighRiskItem
   - type: StealTarget
-    stealGroup: JetpackCaptainFilled
+    stealGroup:
+    - JetpackCaptainFilled
 
 # Filled captain
 - type: entity

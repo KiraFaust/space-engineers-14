@@ -9,7 +9,10 @@
     sprite: _SE/Structures/Walls/dev.rsi
   - type: IconSmooth
     key: walls
-    base: dev
+    states:
+    - !type:CornerSpriteSmoothing
+      mask: [ walls, windows, grilles, marble, doors ]
+      base: dev
   - type: Fixtures
     fixtures:
         fix1:

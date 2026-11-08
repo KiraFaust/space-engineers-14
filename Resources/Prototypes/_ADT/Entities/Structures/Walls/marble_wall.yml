@@ -10,7 +10,12 @@
       sprite: _ADT/Structures/Walls/marble_wall.rsi
     - type: IconSmooth
       key: walls
-      base: state
+      # _SE start
+      states:
+      - !type:CornerSpriteSmoothing
+        mask: [ walls, windows, grilles, marble, doors ]
+        base: state
+      # _SE end
     - type: Destructible
       thresholds:
         - trigger:

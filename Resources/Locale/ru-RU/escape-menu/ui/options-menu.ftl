@@ -65,6 +65,9 @@ ui-options-fancy-speech = Показывать имена в облачках с
 ui-options-fancy-name-background = Добавить фон облачкам с текстом
 ui-options-chat-follow-button = Будучи призраком, показывать кнопку наблюдения рядом с сообщениями чата
 ui-options-vsync = Вертикальная синхронизация
+ui-options-max-fps = Максимум FPS:
+ui-options-max-fps-display-rate = Частота экрана
+ui-options-max-fps-tooltip = Максимальная частота кадров для клиента. Установите 0, чтобы убрать ограничение. Не действует при включённой вертикальной синхронизации.
 ui-options-fullscreen = Полный экран
 ui-options-lighting-label = Качество освещения:
 ui-options-lighting-very-low = Очень низкое
@@ -401,6 +404,9 @@ ui-options-chat-window-opacity = Непрозрачность окна чата
 ui-options-speech-bubble-text-opacity = Непрозрачность текста речевого пузыря
 ui-options-speech-bubble-speaker-opacity = Непрозрачность диктора речевого пузыря
 ui-options-speech-bubble-background-opacity = Непрозрачность фона речевого пузыря
+ui-options-chat-preview = Показать предварительный просмотр речевого пузыря
+ui-options-preview-bubble-background-opacity = Непрозрачность фона речевого пузыря предварительного просмотра
+ui-options-vacuum-overlay-intensity = Интенсивность эффекта вакуума
 
 ui-options-censor-nudity = Цензура обнажённых персонажей
 
