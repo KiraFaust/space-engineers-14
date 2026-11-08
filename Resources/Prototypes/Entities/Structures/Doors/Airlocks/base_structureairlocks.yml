@@ -22,6 +22,7 @@
   - type: InteractionOutline
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/airlock-base.rsi
+    snapCardinals: true # _SE
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
