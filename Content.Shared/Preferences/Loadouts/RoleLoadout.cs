@@ -1,11 +1,9 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Shared.CCVar;
 using Content.Shared.Humanoid.Prototypes;
-using Content.Corvax.Interfaces.Shared;
 using Content.Shared.Random;
+using Content.Shared.CCVar;
 using Robust.Shared.Collections;
-using Robust.Shared.Network;
 using Robust.Shared.Configuration;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -29,7 +27,6 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
     /// <summary>
     /// Loadout specific name.
     /// </summary>
-    [DataField]
     public string? EntityName;
 
     /*
@@ -60,12 +57,12 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
     /// <summary>
     /// Ensures all prototypes exist and effects can be applied.
     /// </summary>
-    public void EnsureValid(HumanoidCharacterProfile profile, ICommonSession session, IDependencyCollection collection)
+    public void EnsureValid(HumanoidCharacterProfile profile, ICommonSession? session, IDependencyCollection collection) // Frontier: nullable session
     {
         var groupRemove = new ValueList<string>();
         var protoManager = collection.Resolve<IPrototypeManager>();
         var configManager = collection.Resolve<IConfigurationManager>();
-        var netManager = collection.Resolve<INetManager>(); // Corvax-Loadouts
+        var maxNameLength = configManager.GetCVar(CCVars.MaxNameLength);
 
         if (!protoManager.TryIndex(Role, out var roleProto))
         {
@@ -85,7 +82,6 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
         if (EntityName != null)
         {
             var name = EntityName.Trim();
-            var maxNameLength = configManager.GetCVar(CCVars.MaxNameLength);
 
             if (name.Length > maxNameLength)
             {
@@ -127,24 +123,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
                 continue;
             }
 
-            // Corvax-Loadouts-Start
-            if (collection.TryResolveType<ISharedLoadoutsManager>(out var loadoutsManager) && group.Id == "Inventory")
-            {
-                var prototypes = new List<string>();
-                if (netManager.IsClient)
-                {
-                    prototypes = loadoutsManager.GetClientPrototypes();
-                }
-                else if (loadoutsManager.TryGetServerPrototypes(session.UserId, out var protos))
-                {
-                    prototypes = protos;
-                }
-
-                groupProto.Loadouts.AddRange(prototypes.Select(id => (ProtoId<LoadoutPrototype>)id));
-            }
-            // Corvax-Loadouts-End
-
-            var loadouts = groupProto.MaxLimit > 0 ? groupLoadouts[..Math.Min(groupLoadouts.Count, groupProto.MaxLimit)] : groupLoadouts;
+            var loadouts = groupLoadouts[..Math.Min(groupLoadouts.Count, groupProto.MaxLimit)];
 
             // Validate first
             for (var i = loadouts.Count - 1; i >= 0; i--)
@@ -161,8 +140,25 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
                 // Malicious client maybe, check the group even has it.
                 if (!groupProto.Loadouts.Contains(loadout.Prototype))
                 {
-                    loadouts.RemoveAt(i);
-                    continue;
+                    // Frontier: check subgroups
+                    bool subGroupEntryFound = false;
+                    foreach (var subgroup in groupProto.Subgroups)
+                    {
+                        if (protoManager.TryIndex(subgroup, out var subgroupProto) &&
+                            subgroupProto.Loadouts.Contains(loadout.Prototype))
+                        {
+                            subGroupEntryFound = true;
+                            break;
+                        }
+                    }
+                    if (!subGroupEntryFound)
+                    {
+                        loadouts.RemoveAt(i);
+                        continue;
+                    }
+                    // End Frontier: check subgroups
+                    // loadouts.RemoveAt(i); // Frontier: commented out old implementation
+                    // continue; // Frontier: commented out old implementation
                 }
 
                 // Validate the loadout can be applied (e.g. points).
@@ -180,6 +176,33 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
             // If you put invalid ones first but that's your fault for not using sensible defaults
             if (loadouts.Count < groupProto.MinLimit)
             {
+                // Frontier: apply fallbacks first as default items for a role
+                if (groupProto.Fallbacks.Count > 0)
+                {
+                    foreach (var protoId in groupProto.Fallbacks)
+                    {
+                        // Apply default loadouts from fallbacks up to the minimum limit (bare minimum)
+                        if (loadouts.Count >= groupProto.MinLimit)
+                            break;
+
+                        if (!protoManager.TryIndex(protoId, out var loadoutProto))
+                            continue;
+
+                        var defaultLoadout = new Loadout()
+                        {
+                            Prototype = loadoutProto.ID,
+                        };
+
+                        // Not valid so don't default to it anyway.
+                        if (!IsValid(profile, session, defaultLoadout.Prototype, collection, out _))
+                            continue;
+
+                        loadouts.Add(defaultLoadout);
+                        Apply(loadoutProto);
+                    }
+                }
+                // End Frontier
+
                 foreach (var protoId in groupProto.Loadouts)
                 {
                     if (loadouts.Count >= groupProto.MinLimit)
@@ -192,9 +215,6 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
                     {
                         Prototype = loadoutProto.ID,
                     };
-
-                    if (loadouts.Contains(defaultLoadout))
-                        continue;
 
                     // Not valid so don't default to it anyway.
                     if (!IsValid(profile, session, defaultLoadout.Prototype, collection, out _))
@@ -249,13 +269,41 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
             var loadouts = new List<Loadout>();
             SelectedLoadouts[group] = loadouts;
 
-            if (groupProto.MinLimit > 0 || loadouts.Count < groupProto.DefaultSelected)
+            // Frontier: apply fallbacks as default items for a role
+            if (groupProto.Fallbacks.Count > 0)
+            {
+                foreach (var protoId in groupProto.Fallbacks)
+                {
+                    // Apply default loadouts from fallbacks up to the *maximum* limit
+                    // Must respect maximum limit to be legal
+                    if (loadouts.Count >= groupProto.MaxLimit)
+                        break;
+
+                    if (!protoManager.TryIndex(protoId, out var loadoutProto))
+                        continue;
+
+                    var defaultLoadout = new Loadout()
+                    {
+                        Prototype = loadoutProto.ID,
+                    };
+
+                    // Not valid so don't default to it anyway.
+                    if (!IsValid(profile, session, defaultLoadout.Prototype, collection, out _))
+                        continue;
+
+                    loadouts.Add(defaultLoadout);
+                    Apply(loadoutProto);
+                }
+            }
+            // End Frontier
+
+            if (groupProto.MinLimit > 0)
             {
                 // Apply any loadouts we can.
                 foreach (var protoId in groupProto.Loadouts)
                 {
                     // Reached the limit, time to stop
-                    if (loadouts.Count >= Math.Max(groupProto.MinLimit, groupProto.DefaultSelected))
+                    if (loadouts.Count >= groupProto.MinLimit)
                         break;
 
                     if (!protoManager.TryIndex(protoId, out var loadoutProto))
@@ -306,8 +354,45 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
             valid = valid && effect.Validate(profile, this, loadoutProto, session, collection, out reason);
         }
 
+        // Frontier: add hide effects
+        foreach (var effect in loadoutProto.HideEffects)
+        {
+            valid = valid && effect.Validate(profile, this, loadoutProto, session, collection, out reason);
+        }
+        // End Frontier
+
         return valid;
     }
+
+    // Frontier: hidden loadouts
+    /// <summary>
+    /// Returns whether a loadout should be hidden or not
+    /// </summary>
+    public bool IsHidden(HumanoidCharacterProfile profile, ICommonSession? session, ProtoId<LoadoutPrototype> loadout, IDependencyCollection collection)
+    {
+        var protoManager = collection.Resolve<IPrototypeManager>();
+
+        if (!protoManager.TryIndex(loadout, out var loadoutProto))
+        {
+            return true;
+        }
+
+        if (!protoManager.HasIndex(Role))
+        {
+            return true;
+        }
+
+        // Frontier: add hide effects
+        foreach (var effect in loadoutProto.HideEffects)
+        {
+            if (!effect.Validate(profile, this, loadoutProto, session, collection, out var _)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    // End Frontier: hidden loadouts
 
     /// <summary>
     /// Applies the specified loadout to this group.
@@ -317,8 +402,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
         var groupLoadouts = SelectedLoadouts[selectedGroup];
 
         // Need to unselect existing ones if we're at or above limit
-        var groupProto = protoManager.Index(selectedGroup);
-        var limit = groupProto.MaxLimit > 0 ? Math.Max(0, groupLoadouts.Count + 1 - protoManager.Index(selectedGroup).MaxLimit) : 0;
+        var limit = Math.Max(0, groupLoadouts.Count + 1 - protoManager.Index(selectedGroup).MaxLimit);
 
         for (var i = 0; i < groupLoadouts.Count; i++)
         {

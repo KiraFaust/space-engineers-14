@@ -45,6 +45,7 @@ namespace Content.Server.Preferences.Managers
         [Dependency] private IPrototypeManager _prototypeManager = default!;
         [Dependency] private MarkingManager _marking = default!;
         [Dependency] private ISerializationManager _serialization = default!;
+        [Dependency] private readonly IEntityManager _entityManager = default!; // _SE
         private ISharedSponsorsManager? _sponsors;
 
         // Cache player prefs on the server so we don't need as much async hell related to them.
@@ -277,6 +278,30 @@ namespace Content.Server.Preferences.Managers
             profile.EnsureValid(session, _dependencies, sponsorPrototypes);
             // Corvax-Sponsors-End
 
+            // _SE start
+            if (_cfg.GetCVar(BankCVars.BankEnabled))
+            {
+                if (curPrefs.Characters.TryGetValue(slot, out var existingProfile))
+                {
+                    if (profile.BankBalance != existingProfile.BankBalance)
+                    {
+                        _sawmill.Info($"{session.Name} tried to modify money (expected {existingProfile.BankBalance}, got {profile.BankBalance}). Reverting.");
+                        profile = profile.WithBankBalance(existingProfile.BankBalance);
+                    }
+                }
+                else
+                {
+                    // новый слот
+                    var expected = _cfg.GetCVar(BankCVars.BankStarter);
+                    if (profile.BankBalance != expected)
+                    {
+                        _sawmill.Info($"{session.Name} tried to create a character with non-starter balance (expected {expected}, got {profile.BankBalance}). Reverting.");
+                        profile = profile.WithBankBalance(expected);
+                    }
+                }
+            }
+            // _SE end
+
             var profiles = new Dictionary<int, HumanoidCharacterProfile>(curPrefs.Characters)
             {
                 [slot] = profile
@@ -459,6 +484,10 @@ namespace Content.Server.Preferences.Managers
                 MaxCharacterSlots = GetMaxUserCharacterSlots(session.UserId) // Corvax-Sponsors
             };
             _netManager.ServerSendMessage(msg, session.Channel);
+            // _SE start
+            if (session.AttachedEntity != null)
+                _entityManager.EventBus.RaiseLocalEvent(session.AttachedEntity.Value, new PreferencesLoadedEvent(session, prefsData.Prefs));
+            // _SE end
         }
 
         public void OnClientDisconnected(ICommonSession session)
@@ -539,6 +568,11 @@ namespace Content.Server.Preferences.Managers
                 //Randomize species and set job priorities from cvar
                 var profile = HumanoidCharacterProfile.Random(speciesToBlacklist);
                 profile = profile.WithJobFromCvar(_cfg);
+
+                // _SE start
+                if (_cfg.GetCVar(BankCVars.BankEnabled))
+                    profile = profile.WithBankBalance(_cfg.GetCVar(BankCVars.BankStarter));
+                // _SE end
 
                 return await _db.InitPrefsAsync(userId, profile, cancel);
             }

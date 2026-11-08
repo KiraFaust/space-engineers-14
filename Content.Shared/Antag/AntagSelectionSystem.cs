@@ -43,7 +43,7 @@ public abstract partial class AntagSelectionSystem : GameRuleSystem<AntagSelecti
 {
     [Dependency] protected ISharedPlayerManager PlayerManager = default!;
     [Dependency] protected ISharedAdminLogManager AdminLogger = default!;
-    [Dependency] private ArrivalsSystem _arrivals = default!;
+    [Dependency] private SharedArrivalsSystem _arrivals = default!; // _SE
     [Dependency] protected EntityWhitelistSystem Whitelist = default!;
     [Dependency] protected FollowerSystem Follower = default!;
     [Dependency] protected LoadoutSystem Loadout = default!;

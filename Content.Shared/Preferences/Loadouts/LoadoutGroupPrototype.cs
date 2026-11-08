@@ -1,5 +1,5 @@
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
+using Content.Shared.Roles;
 
 namespace Content.Shared.Preferences.Loadouts;
 
@@ -7,19 +7,10 @@ namespace Content.Shared.Preferences.Loadouts;
 /// Corresponds to a set of loadouts for a particular slot.
 /// </summary>
 [Prototype]
-public sealed partial class LoadoutGroupPrototype : IPrototype, IInheritingPrototype
+public sealed partial class LoadoutGroupPrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = string.Empty;
-
-    /// <inheritdoc />
-    [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<LoadoutGroupPrototype>))]
-    public string[]? Parents { get; private set; }
-
-    /// <inheritdoc />
-    [NeverPushInheritance]
-    [AbstractDataField]
-    public bool Abstract { get; private set; }
 
     /// <summary>
     /// User-friendly name for the group.
@@ -34,12 +25,6 @@ public sealed partial class LoadoutGroupPrototype : IPrototype, IInheritingProto
     public int MinLimit = 1;
 
     /// <summary>
-    /// Number of loadouts that are selected by default.
-    /// </summary>
-    [DataField]
-    public int DefaultSelected = 0;
-
-    /// <summary>
     /// Maximum limit for the category.
     /// </summary>
     [DataField]
@@ -51,7 +36,23 @@ public sealed partial class LoadoutGroupPrototype : IPrototype, IInheritingProto
     [DataField]
     public bool Hidden;
 
-    [AlwaysPushInheritance]
     [DataField(required: true)]
     public List<ProtoId<LoadoutPrototype>> Loadouts = new();
+
+    // Frontier: loadout redundancy
+    /// <summary>
+    /// Loadout subgroups - will be appended to loadout list.
+    /// </summary>
+    [DataField]
+    public List<ProtoId<LoadoutGroupPrototype>> Subgroups = new();
+    // End Frontier
+
+    // Frontier: handle unaffordable loadouts
+    /// <summary>
+    /// Fallback loadouts to be selected in case a character cannot afford them.
+    /// Also serves as a default loadout options (up to the maxLimit for a set) for a new character.
+    /// </summary>
+    [DataField]
+    public List<ProtoId<LoadoutPrototype>> Fallbacks = new();
+    // End Frontier
 }

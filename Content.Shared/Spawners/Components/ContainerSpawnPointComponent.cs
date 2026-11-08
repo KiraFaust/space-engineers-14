@@ -1,5 +1,4 @@
 using Content.Shared.Roles;
-using Content.Shared.Spawners.EntitySystems;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Spawners.Components;
@@ -9,7 +8,6 @@ namespace Content.Shared.Spawners.Components;
 /// Occurs before regular spawn points but after arrivals.
 /// </summary>
 [RegisterComponent]
-[Access(typeof(ContainerSpawnPointSystem))]
 public sealed partial class ContainerSpawnPointComponent : Component, ISpawnPoint
 {
     /// <summary>

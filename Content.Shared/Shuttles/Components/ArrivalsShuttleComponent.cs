@@ -3,7 +3,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Shared.Shuttles.Components;
 
-[RegisterComponent, Access(typeof(ArrivalsSystem)), AutoGenerateComponentPause]
+[RegisterComponent, Access(typeof(SharedArrivalsSystem)), AutoGenerateComponentPause]
 public sealed partial class ArrivalsShuttleComponent : Component
 {
     [DataField("station")]

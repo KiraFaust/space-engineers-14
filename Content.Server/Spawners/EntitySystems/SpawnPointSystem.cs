@@ -1,17 +1,20 @@
 using Content.Shared.GameTicking;
 using Content.Shared.Spawners.Components;
-using Content.Shared.Station.Systems;
+using Content.Shared.Station; // _SE
+using Content.Server.Station.Systems;  // _SE
+using Content.Shared.Spawners.Components; // _SE
 using Robust.Shared.Map;
 using Robust.Shared.Random;
 
-namespace Content.Shared.Spawners.EntitySystems;
+namespace Content.Server.Spawners.EntitySystems;
 
 public sealed partial class SpawnPointSystem : EntitySystem
 {
     [Dependency] private GameTicker _gameTicker = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private StationSystem _stationSystem = default!;
-    [Dependency] private StationSpawningSystem _stationSpawning = default!;
+    [Dependency] private PlayerSpawningEvent _stationSpawning = default!;
+    [Dependency] private StationSpawningSystem _stationAltSpawning = default!;
 
     [SubscribeLocalEvent]
     private void OnPlayerSpawning(PlayerSpawningEvent args)
@@ -61,7 +64,7 @@ public sealed partial class SpawnPointSystem : EntitySystem
 
         var spawnLoc = _random.Pick(possiblePositions);
 
-        args.SpawnResult = _stationSpawning.SpawnPlayerMob(
+        args.SpawnResult = _stationAltSpawning.SpawnPlayerMob(
             spawnLoc,
             args.Job,
             args.HumanoidCharacterProfile,

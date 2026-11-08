@@ -25,6 +25,7 @@ using Robust.Shared.Utility;
 using Robust.Shared;
 using YamlDotNet.RepresentationModel;
 using Content.Corvax.Interfaces.Shared; // Corvax-Sponsors
+using Content.Shared._NF.Bank; // Frontier
 
 namespace Content.Shared.Preferences
 {
@@ -86,6 +87,16 @@ namespace Content.Shared.Preferences
         [DataField]
         public ProtoId<SpeciesPrototype> Species { get; set; } = DefaultSpecies;
 
+        // Frontier
+        public string BankBalanceText => BankSystemExtensions.ToSpesoString(BankBalance);
+        public const int DefaultBalance = 30000;
+        // End Frontier
+
+        // Frontier: Bank balance
+        [DataField]
+        public int BankBalance { get; private set; } = DefaultBalance;
+        // End Frontier
+
         [DataField] //Corvax-TTS
         public string TTSVoice { get; set; } = HumanoidProfileSystem.DefaultVoice;
 
@@ -144,6 +155,7 @@ namespace Content.Shared.Preferences
             Sex sex,
             ProtoId<EmoteSoundsPrototype> voice,
             Gender gender,
+            int bankBalance,
             HumanoidCharacterAppearance appearance,
             SpawnPriorityPreference spawnPriority,
             Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
@@ -160,6 +172,7 @@ namespace Content.Shared.Preferences
             Sex = sex;
             Voice = voice;
             Gender = gender;
+            BankBalance = bankBalance;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
             _jobPriorities = jobPriorities;
@@ -193,6 +206,7 @@ namespace Content.Shared.Preferences
                 other.Sex,
                 other.Voice,
                 other.Gender,
+                other.BankBalance,
                 other.Appearance.Clone(),
                 other.SpawnPriority,
                 new Dictionary<ProtoId<JobPrototype>, JobPriority>(other.JobPriorities),
@@ -220,14 +234,22 @@ namespace Content.Shared.Preferences
         /// <returns>Humanoid character profile with default settings.</returns>
         public static HumanoidCharacterProfile DefaultWithSpecies(ProtoId<SpeciesPrototype>? species = null, Sex? sex = null)
         {
-            species ??= HumanoidCharacterProfile.DefaultSpecies;
+            species ??= DefaultSpecies;
             sex ??= Sex.Male;
+
+            // _SE start
+            var cfg = IoCManager.Resolve<IConfigurationManager>();
+            var startingBalance = 0;
+            if (cfg.GetCVar(BankCVars.BankEnabled))
+                startingBalance = cfg.GetCVar(BankCVars.BankStarter);
+            // _SE end
 
             return new()
             {
                 Species = species.Value,
                 Sex = sex.Value,
                 Appearance = HumanoidCharacterAppearance.DefaultWithSpecies(species.Value, sex.Value),
+                BankBalance = startingBalance,  // _SE
             };
         }
 
@@ -454,6 +476,12 @@ namespace Content.Shared.Preferences
         }
         // Corvax-TTS-End
 
+        // Frontier: Bank balance
+        public HumanoidCharacterProfile WithBankBalance(int bankBalance)
+        {
+            return new(this) { BankBalance = bankBalance };
+        }
+        // End Frontier
         public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance)
         {
             return new(this) { Appearance = appearance };
@@ -705,6 +733,12 @@ namespace Content.Shared.Preferences
                 _ => Gender.Epicene // Invalid enum values.
             };
 
+            // Frontier
+            var bankBalance = BankBalance;
+            if (BankBalance <= 0)
+                bankBalance = 0;
+            // End Frontier
+
             string name;
             var maxNameLength = configManager.GetCVar(CCVars.MaxNameLength);
             if (string.IsNullOrEmpty(Name))
@@ -801,6 +835,7 @@ namespace Content.Shared.Preferences
             Sex = sex;
             Voice = voice;
             Gender = gender;
+            BankBalance = bankBalance;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
 
@@ -950,6 +985,7 @@ namespace Content.Shared.Preferences
             hashCode.Add(TTSVoice); // Corvax-TTS
             hashCode.Add((int)Gender);
             hashCode.Add(Appearance);
+            hashCode.Add(BankBalance);
             hashCode.Add((int)SpawnPriority);
             hashCode.Add((int)PreferenceUnavailable);
             return hashCode.ToHashCode();

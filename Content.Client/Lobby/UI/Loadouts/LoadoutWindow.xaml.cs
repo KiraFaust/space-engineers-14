@@ -11,6 +11,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Content.Shared._NF.Bank; // Frontier
 
 namespace Content.Client.Lobby.UI.Loadouts;
 
@@ -89,6 +90,12 @@ public sealed partial class LoadoutWindow : FancyWindow
                 };
             }
         }
+        //Frontier - we inject our label here but it needs recalculating every time a new item is selected,
+        //so we add a new method and call it there too.
+        CalculateLoadoutCost(loadout, collection);
+        // Frontier - update bank balance label text - value should not change.
+        Balance.Margin = new Thickness(5, 2, 5, 5);
+        Balance.Text = Loc.GetString("frontier-loadout-balance", ("balance", BankSystemExtensions.ToSpesoString(Profile.BankBalance)));
     }
 
     public void RefreshLoadouts(RoleLoadout loadout, ICommonSession session, IDependencyCollection collection)
@@ -97,5 +104,32 @@ public sealed partial class LoadoutWindow : FancyWindow
         {
             group.RefreshLoadouts(Profile, loadout, session, collection);
         }
+
+        CalculateLoadoutCost(loadout, collection); //Frontier
     }
+
+    /// <summary>
+    /// Frontier function to calculate and update the label.
+    /// </summary>
+    /// <param name="loadout">The currently selected loadout</param>
+    /// <param name="collection">IDependency Collection of various dependencies</param>
+    private void CalculateLoadoutCost(RoleLoadout loadout, IDependencyCollection collection)
+    {
+        var protoManager = collection.Resolve<IPrototypeManager>();
+        var cost = 0;
+        foreach (var loadoutGroup in loadout.SelectedLoadouts)
+        {
+            foreach (var equipment in loadoutGroup.Value)
+            {
+                if (protoManager.TryIndex(equipment.Prototype, out var equipProto))
+                {
+                    cost += equipProto.Price;
+                }
+            }
+        }
+
+        Cost.Margin = new Thickness(5, 2, 5, 5);
+        Cost.Text = Loc.GetString("frontier-loadout-cost", ("cost", BankSystemExtensions.ToSpesoString(cost)));
+    }
+    // End Frontier
 }

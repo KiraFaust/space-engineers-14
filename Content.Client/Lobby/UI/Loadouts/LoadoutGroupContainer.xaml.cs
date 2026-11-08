@@ -224,17 +224,35 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
     /// <param name="collection">The dependency injection container.</param>
     /// <param name="loadoutSystem">The loadout system instance.</param>
     /// <returns>A fully initialized LoadoutContainer for UI display.</returns>
-    private LoadoutContainer CreateLoadoutUI(LoadoutPrototype proto, HumanoidCharacterProfile profile, RoleLoadout loadout, ICommonSession session, IDependencyCollection collection, LoadoutSystem loadoutSystem)
+    private LoadoutContainer CreateLoadoutUI(LoadoutPrototype proto, HumanoidCharacterProfile profile,
+    RoleLoadout loadout, ICommonSession session, IDependencyCollection collection, LoadoutSystem loadoutSystem)
     {
         var selected = loadout.SelectedLoadouts[_groupProto.ID];
-
         var pressed = selected.Any(e => e.Prototype == proto.ID);
 
+        // _SE start
+        var cfg = collection.Resolve<IConfigurationManager>();
+        var bankEnabled = cfg.GetCVar(BankCVars.BankEnabled);
+        var price = proto.Price ?? 0;
+        var showPrice = bankEnabled && price > 0;
+        var canAfford = !showPrice || profile.BankBalance >= price;
         var enabled = loadout.IsValid(profile, session, proto.ID, collection, out var reason);
+
+        if (enabled && !canAfford)
+        {
+            enabled = false;
+            reason = Loc.GetString("loadout-cant-afford", ("price", price));
+        }
+        // _SE end
 
         var cont = new LoadoutContainer(proto, !enabled, reason);
 
-        cont.Text = loadoutSystem.GetName(proto);
+        // _SE start
+        var name = loadoutSystem.GetName(proto);
+        cont.Text = showPrice
+            ? Loc.GetString("loadout-cost-display", ("name", name), ("price", price))
+            : name;
+        // _SE end
 
         cont.Select.Pressed = pressed;
 

@@ -1,11 +1,13 @@
 using Content.Shared.GameTicking;
 using Content.Shared.Preferences;
 using Content.Shared.Spawners.Components;
-using Content.Shared.Station.Systems;
+using Content.Shared.Station; // _SE
+using Content.Server.Station.Systems;  // _SE
+using Content.Shared.Spawners.Components; // _SE
 using Robust.Shared.Containers;
 using Robust.Shared.Random;
 
-namespace Content.Shared.Spawners.EntitySystems;
+namespace Content.Server.Spawners.EntitySystems;
 
 public sealed partial class ContainerSpawnPointSystem : EntitySystem
 {
@@ -13,7 +15,8 @@ public sealed partial class ContainerSpawnPointSystem : EntitySystem
     [Dependency] private GameTicker _gameTicker = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private StationSystem _station = default!;
-    [Dependency] private StationSpawningSystem _stationSpawning = default!;
+    [Dependency] private PlayerSpawningEvent _stationSpawning = default!;
+    [Dependency] private StationSpawningSystem _stationAltSpawning = default!;
 
     [SubscribeLocalEvent(before: new []{typeof(SpawnPointSystem)})]
     public void HandlePlayerSpawning(PlayerSpawningEvent args)
@@ -63,7 +66,7 @@ public sealed partial class ContainerSpawnPointSystem : EntitySystem
         // we just need some default coords so we can spawn the player entity.
         var baseCoords = possibleContainers[0].Comp3.Coordinates;
 
-        args.SpawnResult = _stationSpawning.SpawnPlayerMob(
+        args.SpawnResult = _stationAltSpawning.SpawnPlayerMob(
             baseCoords,
             args.Job,
             args.HumanoidCharacterProfile,
