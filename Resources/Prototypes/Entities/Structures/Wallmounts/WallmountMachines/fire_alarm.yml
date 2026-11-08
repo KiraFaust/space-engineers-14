@@ -72,7 +72,7 @@
     layoutId: FireAlarm
   - type: Sprite
     sprite: Structures/Wallmounts/fire-alarm.rsi
-    offset: 0, -0.25
+    #offset: 0, -0.25 # _SE
     layers:
     - state: base
       map: ["fireAlarmBase"]

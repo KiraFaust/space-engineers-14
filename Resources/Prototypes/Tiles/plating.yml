@@ -66,7 +66,7 @@
 - type: tile
   id: Lattice
   name: tiles-lattice
-  sprite: /Textures/Tiles/lattice.png
+  sprite: /Textures/_SE/Tiles/lattice.png # _SE
   baseTurf: Space
   isSubfloor: true
   deconstructTools: [ Cutting ]

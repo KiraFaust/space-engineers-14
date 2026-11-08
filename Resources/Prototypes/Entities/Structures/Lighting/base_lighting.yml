@@ -23,7 +23,7 @@
   - type: InteractionOutline
   - type: Sprite
     drawdepth: WallMountedItems
-    offset: 0, 1
+    #offset: 0, 1 # _SE
     layers:
     - map: ["enum.PoweredLightLayers.Base"]
       state: base
@@ -111,7 +111,7 @@
   components:
   - type: Sprite
     sprite: Structures/Wallmounts/Lighting/light-tube.rsi
-    offset: 0, 1
+    #offset: 0, 1 # _SE
     state: empty
   - type: PointLight
     enabled: false
@@ -444,7 +444,7 @@
     speed: 40
   - type: Sprite
     sprite: Structures/Wallmounts/Lighting/emergency-light.rsi
-    offset: 0, 1
+    #offset: 0, 1 # _SE
     layers:
     - state: base
       map: [ "enum.EmergencyLightVisualLayers.Base" ]
