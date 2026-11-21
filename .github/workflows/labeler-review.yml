@@ -18,6 +18,6 @@ jobs:
         team: "content-maintainers,junior-maintainers"
         GITHUB_TOKEN: ${{ secrets.LABELER_PAT }}
     - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }}
-      uses: actions-ecosystem/action-add-labels@v1
+      uses: actions-ecosystem/action-add-labels@1a9c3715c0037e96b97bb38cb4c4b56a1f1d4871 # _SE
       with:
         labels: "S: Approved"
