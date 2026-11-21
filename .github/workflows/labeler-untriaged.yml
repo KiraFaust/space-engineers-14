@@ -8,6 +8,11 @@ on:
 
 jobs:
   add_label:
+    # _SE start
+    permissions:
+      pull-requests: write
+      issues: write
+    # _SE end
     runs-on: ubuntu-latest
     steps:
     - uses: actions-ecosystem/action-add-labels@v1
