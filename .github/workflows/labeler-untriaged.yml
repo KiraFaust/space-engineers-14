@@ -2,17 +2,18 @@ name: "Labels: Untriaged"
 
 on:
   issues:
-    types: [opened]
+    types: [ opened ]
   pull_request_target:
-    types: [opened]
+    types: [ opened ]
+
+# _SE start
+permissions:
+  pull-requests: write
+  issues: write
+# _SE end
 
 jobs:
   add_label:
-    # _SE start
-    permissions:
-      pull-requests: write
-      issues: write
-    # _SE end
     runs-on: ubuntu-latest
     steps:
     - uses: actions-ecosystem/action-add-labels@1a9c3715c0037e96b97bb38cb4c4b56a1f1d4871 # _SE
